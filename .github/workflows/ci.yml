@@ -31,14 +31,41 @@ jobs:
         cmake --build . --config Release
 
     - name: Start server in background
+      shell: powershell
       run: |
         cd build\Release
-        Start-Job { .\infralite.exe }
+        # Start the server process and redirect output to a log file
+        Start-Process -FilePath .\infralite.exe `
+                      -RedirectStandardOutput server.log `
+                      -RedirectStandardError server.log
+        # Give the server time to bind to port 8080
         Start-Sleep -Seconds 5
+
+    - name: Wait for server health
       shell: powershell
+      run: |
+        $maxRetries = 10
+        for ($i=0; $i -lt $maxRetries; $i++) {
+          try {
+            Invoke-WebRequest http://localhost:8080/hello -UseBasicParsing
+            Write-Host "Server is up!"
+            exit 0
+          } catch {
+            Write-Host "Server not ready, retrying..."
+            Start-Sleep -Seconds 2
+          }
+        }
+        Write-Error "Server did not start in time"
+        exit 1
 
     - name: Run route tests
+      shell: powershell
       run: |
         pip install pytest requests
         pytest tests/test_routes.py -v
-      shell: powershell
+
+    - name: Upload server logs
+      uses: actions/upload-artifact@v4
+      with:
+        name: server-log
+        path: build/Release/server.log
