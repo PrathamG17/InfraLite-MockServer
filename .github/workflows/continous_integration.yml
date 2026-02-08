@@ -1,0 +1,47 @@
+name: InfraLite-MockServer CI Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install CMake
+      run: choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'
+
+    - name: Create build directory
+      run: mkdir build
+
+    - name: Configure CMake
+      run: |
+        cd build
+        cmake ..
+
+    - name: Build project (Release)
+      run: |
+        cd build
+        cmake --build . --config Release
+
+    - name: Start server in background
+      run: |
+        cd build/Release
+        start infralite.exe
+      shell: cmd
+
+    - name: Run route tests
+      run: |
+        pip install pytest requests
+        pytest tests/test_routes.py -v
+
+    - name: Stop server after tests
+      run: |
+        taskkill /IM infralite.exe /F || echo "Server already stopped"
+      shell: cmd
