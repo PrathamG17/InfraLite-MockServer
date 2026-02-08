@@ -33,15 +33,12 @@ jobs:
     - name: Start server in background
       run: |
         cd build\Release
-        start "" infralite.exe
-      shell: cmd
-
-    - name: Wait for server
-      run: |
-         powershell Start-Sleep -Seconds 5
+        Start-Job { .\infralite.exe }
+        Start-Sleep -Seconds 5
       shell: powershell
 
     - name: Run route tests
       run: |
         pip install pytest requests
         pytest tests/test_routes.py -v
+      shell: powershell
