@@ -1,0 +1,8 @@
+#output build folder
+out/
+
+#rough files
+Notes.txt
+
+#IDE
+.vs

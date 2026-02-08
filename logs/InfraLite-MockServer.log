@@ -1,0 +1,307 @@
+[2026-02-03 07:14:32] [INFO] Server starting up...
+[2026-02-03 07:29:53] [INFO] Server starting up...
+[2026-02-03 07:42:58] [INFO] Server starting up...
+[2026-02-03 07:47:06] [INFO] Server starting up...
+[2026-02-04 05:53:47] [INFO] Server starting up...
+[2026-02-04 05:53:47] [INFO] 
+	
+
+[2026-02-04 05:53:47] [INFO] Socket created successfully.
+[2026-02-04 05:53:47] [INFO] Socket options set successfully (SO_REUSEADDR).
+[2026-02-04 05:53:47] [INFO] 	
+
+[2026-02-04 05:53:47] [INFO] 	
+
+[2026-02-04 05:53:47] [INFO] 	
+
+	
+
+[2026-02-04 06:09:23] [INFO] Server starting up...
+[2026-02-04 06:09:23] [INFO] Server object created on port 8080
+[2026-02-04 06:09:23] [INFO] Socket created successfully.
+[2026-02-04 06:09:23] [INFO] Socket options set successfully (SO_REUSEADDR).
+[2026-02-04 06:09:23] [INFO] Socket bound successfully to port 8080
+[2026-02-04 06:09:23] [INFO] Server is now listening on port 8080
+[2026-02-04 06:09:23] [INFO] Server running on port 8080
+[2026-02-04 06:14:05] [INFO] Client connected.
+[2026-02-04 06:14:05] [INFO] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Sec-GPC: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+[2026-02-04 06:14:05] [INFO] Sent response (118 bytes)
+[2026-02-04 06:14:05] [INFO] Client connected.
+[2026-02-04 06:14:05] [INFO] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Sec-GPC: 1
+Connection: keep-alive
+Referer: http://localhost:8080/hello
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=6
+
+
+[2026-02-04 06:14:05] [INFO] Sent response (180 bytes)
+[2026-02-04 06:14:40] [INFO] Client connected.
+[2026-02-04 06:14:40] [INFO] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Sec-GPC: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+[2026-02-04 06:14:40] [INFO] Sent response (120 bytes)
+[2026-02-04 06:15:24] [INFO] Client connected.
+[2026-02-04 06:15:24] [INFO] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Sec-GPC: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+[2026-02-04 06:15:24] [INFO] Sent response (280 bytes)
+[2026-02-04 06:15:54] [INFO] Client connected.
+[2026-02-04 06:15:54] [INFO] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 25
+Origin: http://localhost:8080
+Sec-GPC: 1
+Connection: keep-alive
+Referer: http://localhost:8080/page
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+data=InfraLite-MockServer
+[2026-02-04 06:15:54] [INFO] Sent response (131 bytes)
+[2026-02-04 06:17:08] [INFO] Client connected.
+[2026-02-04 06:17:08] [INFO] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Sec-GPC: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+[2026-02-04 06:17:08] [INFO] Sent response (108 bytes)
+[2026-02-04 06:17:32] [INFO] Client connected.
+[2026-02-04 06:17:32] [INFO] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Sec-GPC: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+[2026-02-04 06:17:32] [INFO] Sent response (121 bytes)
+[2026-02-04 06:17:32] [INFO] Client connected.
+[2026-02-04 06:17:32] [INFO] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Sec-Fetch-Storage-Access: none
+Sec-GPC: 1
+Connection: keep-alive
+Referer: http://localhost:8080/json
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: cross-site
+Priority: u=6
+
+
+[2026-02-04 06:17:32] [INFO] Sent response (180 bytes)
+[2026-02-04 06:18:09] [INFO] Client connected.
+[2026-02-04 06:18:09] [INFO] Raw HTTP request received:
+GET /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Sec-GPC: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+[2026-02-04 06:18:09] [INFO] Sent response (175 bytes)
+[2026-02-04 06:18:57] [INFO] Client connected.
+[2026-02-04 06:18:57] [INFO] Raw HTTP request received:
+GET /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Sec-GPC: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+[2026-02-04 06:18:57] [INFO] Sent response (388 bytes)
+[2026-02-04 06:18:57] [INFO] Client connected.
+[2026-02-04 06:18:57] [INFO] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Sec-GPC: 1
+Connection: keep-alive
+Referer: http://localhost:8080/index.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+[2026-02-04 06:18:57] [INFO] Sent response (192 bytes)
+[2026-02-04 06:18:57] [INFO] Client connected.
+[2026-02-04 06:18:57] [INFO] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Sec-GPC: 1
+Connection: keep-alive
+Referer: http://localhost:8080/index.html
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=5, i
+
+
+[2026-02-04 06:18:57] [INFO] Sent response (7147 bytes)
+[2026-02-04 06:18:57] [INFO] Client connected.
+[2026-02-04 06:18:57] [INFO] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Sec-GPC: 1
+Connection: keep-alive
+Referer: http://localhost:8080/index.html
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=2
+
+
+[2026-02-04 06:18:57] [INFO] Sent response (192 bytes)
+[2026-02-04 06:21:06] [INFO] Server starting up...
+[2026-02-04 06:21:06] [INFO] Server object created on port 8080
+[2026-02-04 06:21:06] [INFO] Socket created successfully.
+[2026-02-04 06:21:06] [INFO] Socket options set successfully (SO_REUSEADDR).
+[2026-02-04 06:21:06] [INFO] Socket bound successfully to port 8080
+[2026-02-04 06:21:06] [INFO] Server is now listening on port 8080
+[2026-02-04 06:21:06] [INFO] Server running on port 8080
+[2026-02-04 06:50:20] [INFO] Server starting up...
+[2026-02-04 06:50:20] [INFO] Server object created on port 8080
+[2026-02-04 06:50:20] [INFO] Socket created successfully.
+[2026-02-04 06:50:20] [INFO] Socket options set successfully (SO_REUSEADDR).
+[2026-02-04 06:50:20] [INFO] Socket bound successfully to port 8080
+[2026-02-04 06:50:20] [INFO] Server is now listening on port 8080
+[2026-02-04 06:50:20] [INFO] Server running on port 8080
+[2026-02-04 06:50:42] [INFO] Server shutting down due to console event
+[2026-02-04 06:50:42] [INFO] Stop signal received. Server loop will exit.
+[2026-02-04 06:50:47] [INFO] Server shutting down due to console event
+[2026-02-04 06:50:47] [INFO] Stop signal received. Server loop will exit.
+[2026-02-04 06:52:33] [INFO] Server shutting down due to console event
+[2026-02-04 06:52:33] [INFO] Stop signal received. Server loop will exit.
+[2026-02-04 07:04:18] [INFO] Server starting up...
+[2026-02-04 07:04:18] [INFO] Server object created on port 8080
+[2026-02-04 07:04:18] [INFO] Socket created successfully.
+[2026-02-04 07:04:18] [INFO] Socket options set successfully (SO_REUSEADDR).
+[2026-02-04 07:04:18] [INFO] Socket bound successfully to port 8080
+[2026-02-04 07:04:18] [INFO] Server is now listening on port 8080
+[2026-02-04 07:04:18] [INFO] Server running on port 8080
+[2026-02-04 07:04:30] [INFO] Server shutting down due to console event
+[[2026-02-04 07:04:30] [2026-02-04 07:04:30INFO] [] ERROR] Stop signal received. Server loop will exit.accept() failed with error: 10004
+
+[2026-02-04 07:04:30] [WARNING] Failed to accept client connection.
+[2026-02-04 07:04:30] [INFO] Server stopped.
+[2026-02-04 07:04:30] [INFO] Server shutting down...
+[2026-02-04 07:04:30] [INFO] Server socket closed.
+[2026-02-04 07:04:30] [INFO] Server object destroyed.
