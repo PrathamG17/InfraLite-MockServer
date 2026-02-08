@@ -34,9 +34,7 @@ jobs:
       shell: powershell
       run: |
         cd build\Release
-        # Run server in background; it writes to its own log file
-        .\infralite.exe &
-        # Give the server time to bind to port 8080
+        Start-Process -FilePath .\infralite.exe
         Start-Sleep -Seconds 5
 
     - name: Wait for server health
