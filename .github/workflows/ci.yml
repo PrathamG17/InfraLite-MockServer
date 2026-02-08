@@ -64,4 +64,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: server-log
-        path: build/Release/logs/InfraLite-MockServer.log
+        path: logs/InfraLite-MockServer.log
+        if-no-files-found: warn
