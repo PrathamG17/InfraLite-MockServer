@@ -32,13 +32,13 @@ jobs:
 
     - name: Start server in background
       run: |
-        cd build/Release
-        ./infralite.exe &
-      shell: bash
+        cd build\Release
+        start "" infralite.exe
+      shell: cmd
 
     - name: Wait for server
-      run: sleep 5
-      shell: bash
+      run: timeout /t 5
+      shell: cmd
 
     - name: Run route tests
       run: |
