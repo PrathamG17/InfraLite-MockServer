@@ -37,11 +37,11 @@ jobs:
       shell: cmd
 
     - name: Wait for server
-      run: timeout /t 5
-      shell: cmd
+      run: |
+         powershell Start-Sleep -Seconds 5
+      shell: powershell
 
     - name: Run route tests
       run: |
         pip install pytest requests
         pytest tests/test_routes.py -v
-
