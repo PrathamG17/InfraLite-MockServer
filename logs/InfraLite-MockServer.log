@@ -484,3 +484,228 @@ TestData
 [2026-02-08 12:50:51] [INFO] Server shutting down...
 [2026-02-08 12:50:51] [INFO] Server socket closed.
 [2026-02-08 12:50:51] [INFO] Server object destroyed.
+[2026-02-08 15:18:17] [INFO] Server starting up...
+[2026-02-08 15:18:17] [INFO] Server object created on port 8080
+[2026-02-08 15:18:17] [INFO] Socket created successfully.
+[2026-02-08 15:18:17] [INFO] Socket options set successfully (SO_REUSEADDR).
+[2026-02-08 15:18:17] [INFO] Socket bound successfully to port 8080
+[2026-02-08 15:18:17] [INFO] Server is now listening on port 8080
+[2026-02-08 15:18:17] [INFO] Server running on port 8080
+[2026-02-08 15:19:10] [INFO] Server shutting down due to console event
+[2026-02-08 15:19:10] [INFO] Stop signal received. Server loop will exit.
+[2026-02-08 15:19:10] [ERROR] accept() failed with error: 10004
+[2026-02-08 15:19:10] [WARNING] Failed to accept client connection.
+[2026-02-08 15:19:10] [INFO] Server stopped.
+[2026-02-08 15:19:10] [INFO] Server shutting down...
+[2026-02-08 15:19:10] [INFO] Server socket closed.
+[2026-02-08 15:19:10] [INFO] Server object destroyed.
+[2026-02-08 15:20:29] [INFO] Server starting up...
+[2026-02-08 15:20:29] [INFO] Server object created on port 8080
+[2026-02-08 15:20:29] [INFO] Socket created successfully.
+[2026-02-08 15:20:29] [INFO] Socket options set successfully (SO_REUSEADDR).
+[2026-02-08 15:20:29] [INFO] Socket bound successfully to port 8080
+[2026-02-08 15:20:29] [INFO] Server is now listening on port 8080
+[2026-02-08 15:20:29] [INFO] Server running on port 8080
+[2026-02-08 15:21:12] [INFO] Client connected.
+[2026-02-08 15:21:12] [INFO] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-02-08 15:21:12] [INFO] Sent response (118 bytes)
+[2026-02-08 15:21:14] [INFO] Client connected.
+[2026-02-08 15:21:14] [INFO] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-02-08 15:21:14] [INFO] Sent response (280 bytes)
+[2026-02-08 15:21:16] [INFO] Client connected.
+[2026-02-08 15:21:16] [INFO] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-02-08 15:21:16] [INFO] Sent response (120 bytes)
+[2026-02-08 15:21:18] [INFO] Client connected.
+[2026-02-08 15:21:18] [INFO] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-02-08 15:21:18] [INFO] Sent response (108 bytes)
+[2026-02-08 15:21:21] [INFO] Client connected.
+[2026-02-08 15:21:21] [INFO] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-02-08 15:21:21] [INFO] Sent response (121 bytes)
+[2026-02-08 15:21:23] [INFO] Client connected.
+[2026-02-08 15:21:23] [INFO] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 8
+
+
+[2026-02-08 15:21:23] [INFO] Sent response (106 bytes)
+[2026-02-08 15:30:17] [INFO] Client connected.
+[2026-02-08 15:30:17] [INFO] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Sec-GPC: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+
+[2026-02-08 15:30:17] [INFO] Sent response (280 bytes)
+[2026-02-08 15:30:18] [INFO] Client connected.
+[2026-02-08 15:30:18] [INFO] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Sec-GPC: 1
+Connection: keep-alive
+Referer: http://localhost:8080/page
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Priority: u=6
+
+
+[2026-02-08 15:30:18] [INFO] Sent response (180 bytes)
+[2026-02-08 15:30:25] [INFO] Client connected.
+[2026-02-08 15:30:25] [INFO] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br, zstd
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 10
+Origin: http://localhost:8080
+Sec-GPC: 1
+Connection: keep-alive
+Referer: http://localhost:8080/page
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+
+data=hello
+[2026-02-08 15:30:25] [INFO] Sent response (116 bytes)
+[2026-02-08 15:45:45] [INFO] Client connected.
+[2026-02-08 15:45:45] [INFO] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-02-08 15:45:45] [INFO] Sent response (118 bytes)
+[2026-02-08 15:45:47] [INFO] Client connected.
+[2026-02-08 15:45:47] [INFO] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-02-08 15:45:47] [INFO] Sent response (280 bytes)
+[2026-02-08 15:45:49] [INFO] Client connected.
+[2026-02-08 15:45:49] [INFO] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-02-08 15:45:49] [INFO] Sent response (120 bytes)
+[2026-02-08 15:45:51] [INFO] Client connected.
+[2026-02-08 15:45:51] [INFO] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-02-08 15:45:51] [INFO] Sent response (108 bytes)
+[2026-02-08 15:45:53] [INFO] Client connected.
+[2026-02-08 15:45:53] [INFO] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-02-08 15:45:53] [INFO] Sent response (121 bytes)
+[2026-02-08 15:45:55] [INFO] Client connected.
+[2026-02-08 15:45:55] [INFO] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-02-08 15:45:55] [INFO] Sent response (126 bytes)
+[2026-02-08 15:46:37] [INFO] Server shutting down due to console event
+[2026-02-08 15:46:37] [INFO] Stop signal received. Server loop will exit.
+[2026-02-08 15:46:37] [ERROR] accept() failed with error: 10004
+[2026-02-08 15:46:37] [WARNING] Failed to accept client connection.
+[2026-02-08 15:46:37] [INFO] Server stopped.
+[2026-02-08 15:46:37] [INFO] Server shutting down...
+[2026-02-08 15:46:37] [INFO] Server socket closed.
+[2026-02-08 15:46:37] [INFO] Server object destroyed.

@@ -26,9 +26,15 @@ def test_json():
     r = requests.get(f"{BASE_URL}/json")
     assert r.status_code == 200
     assert r.json()["message"] == "Hello JSON"
-
+''''
 def test_submit():
     payload = "TestData"
     r = requests.post(f"{BASE_URL}/submit", data=payload)
     assert r.status_code == 200
     assert f"Data received: {payload}" in r.text
+'''
+def test_submit():
+    payload = {"data": "TestData"}
+    r = requests.post(f"{BASE_URL}/submit", json=payload)
+    assert r.status_code == 200
+    assert "TestData" in r.text

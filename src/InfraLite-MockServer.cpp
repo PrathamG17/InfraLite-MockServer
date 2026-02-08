@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <csignal>
+#include <filesystem>
 #include "server.hpp"
 #include "router.hpp"
 #include "request.hpp"
@@ -11,11 +12,13 @@
 CServer* gServer = nullptr;
 Logger* gLogger = nullptr;
 
+std::filesystem::path GetProjectRoot();
 BOOL WINAPI ConsoleHandler(DWORD signal);
 
 int main(void)
 {
-    Logger rLogger("D:\\PRATHAMESH\\PDF\\C++\\BOOST\\InfraLite-MockServer\\logs\\InfraLite-MockServer.log");
+    auto baseDir = GetProjectRoot();
+    Logger rLogger((baseDir / "logs" / "InfraLite-MockServer.log").string());
     try
     {
         gLogger = &rLogger;
@@ -26,7 +29,7 @@ int main(void)
         }
 
         // Step 2: Initialize ConfigLoader
-        ConfigLoader rConfig("D:\\PRATHAMESH\\PDF\\C++\\BOOST\\InfraLite-MockServer\\config\\routes.json");
+        ConfigLoader rConfig((baseDir / "config" / "routes.json").string());
         if (!rConfig.LoadConfig(rLogger))
         {
             rLogger.Log("Failed to load routes.json", ELogLevel::LOG_ERROR);
@@ -34,7 +37,7 @@ int main(void)
         }
 
         // Step 3: Initialize FileHandler
-        FileHandler rFileHandler("D:\\PRATHAMESH\\PDF\\C++\\BOOST\\InfraLite-MockServer\\static");
+        FileHandler rFileHandler((baseDir / "static").string());
 
         // Step 4: Initialize Router
         Router rRouter(&rFileHandler);
@@ -102,4 +105,21 @@ BOOL WINAPI ConsoleHandler(DWORD signal)
         return TRUE; // handled
     }
     return FALSE;
+}
+
+std::filesystem::path GetProjectRoot() 
+{
+    auto cwd = std::filesystem::current_path();
+
+    // Walk up until we find "config"
+    for (int i = 0; i < 4; ++i) 
+    { // try up to 4 levels
+        if (std::filesystem::exists(cwd / "config")) 
+        {
+            return cwd;
+        }
+        cwd = cwd.parent_path();
+    }
+
+    return std::filesystem::current_path(); // fallback
 }
