@@ -159,10 +159,6 @@ Follow Setps =>
 5. Push to the branch (`git push origin feature/AmazingFeature`)
 6. Open a Pull Request
 
-### Coding Standards
-
---> [@Prathamesh] used hungarian notation for server module data members, and member functions..
-
 ## 👨‍💻 Team
 
 - **Server Module**: [@PrathamG17, @ShreyasChothe]
