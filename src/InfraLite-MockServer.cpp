@@ -65,10 +65,20 @@ int main(void)
         // Step 3: Register POST route
         rRouter.AddRoute("POST", "/submit", [](const HttpRequest& rReq) {
             HttpResponse rResp;
-            rResp.iStatusCode = 200;
-            rResp.sStatusText = "OK";
             rResp.mHeaders["Content-Type"] = "text/plain";
-            rResp.sBody = "Data received: " + rReq.GetBody();
+
+            // Simple validation: require non-empty body
+            if (rReq.GetBody().empty() || rReq.GetBody() == "{}") {
+                rResp.iStatusCode = 400;
+                rResp.sStatusText = "Bad Request";
+                rResp.sBody = "error: missing data";
+            }
+            else {
+                rResp.iStatusCode = 200;
+                rResp.sStatusText = "OK";
+                rResp.sBody = "Data received: " + rReq.GetBody();
+            }
+
             return rResp;
             });
 

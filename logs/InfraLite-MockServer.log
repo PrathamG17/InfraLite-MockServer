@@ -709,3 +709,1549 @@ Content-Type: application/json
 [2026-02-08 15:46:37] [INFO] Server shutting down...
 [2026-02-08 15:46:37] [INFO] Server socket closed.
 [2026-02-08 15:46:37] [INFO] Server object destroyed.
+[2026-03-02 08:16:46] [info] Server starting up...
+[2026-03-02 08:16:46] [info] Server object created on port 8080
+[2026-03-02 08:16:46] [info] Socket created successfully.
+[2026-03-02 08:16:46] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-02 08:16:46] [info] Socket bound successfully to port 8080
+[2026-03-02 08:16:46] [info] Server is now listening on port 8080
+[2026-03-02 08:16:46] [info] Server running on port 8080
+[2026-03-02 08:22:06] [info] Client connected.
+[2026-03-02 08:22:06] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:22:06] [info] Sent response (118 bytes)
+[2026-03-02 08:22:07] [info] Client connected.
+[2026-03-02 08:22:07] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:22:07] [info] Sent response (118 bytes)
+[2026-03-02 08:22:08] [info] Client connected.
+[2026-03-02 08:22:08] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:22:08] [info] Sent response (118 bytes)
+[2026-03-02 08:22:08] [info] Client connected.
+[2026-03-02 08:22:08] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:22:08] [info] Sent response (280 bytes)
+[2026-03-02 08:22:09] [info] Client connected.
+[2026-03-02 08:22:09] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:22:09] [info] Sent response (280 bytes)
+[2026-03-02 08:22:10] [info] Client connected.
+[2026-03-02 08:22:10] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:22:10] [info] Sent response (280 bytes)
+[2026-03-02 08:22:10] [info] Client connected.
+[2026-03-02 08:22:10] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:22:10] [info] Sent response (120 bytes)
+[2026-03-02 08:22:11] [info] Client connected.
+[2026-03-02 08:22:11] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:22:11] [info] Sent response (120 bytes)
+[2026-03-02 08:22:12] [info] Client connected.
+[2026-03-02 08:22:12] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:22:12] [info] Sent response (120 bytes)
+[2026-03-02 08:22:12] [info] Client connected.
+[2026-03-02 08:22:12] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:22:12] [info] Sent response (108 bytes)
+[2026-03-02 08:22:13] [info] Client connected.
+[2026-03-02 08:22:13] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:22:13] [info] Sent response (108 bytes)
+[2026-03-02 08:22:14] [info] Client connected.
+[2026-03-02 08:22:14] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:22:14] [info] Sent response (108 bytes)
+[2026-03-02 08:22:14] [info] Client connected.
+[2026-03-02 08:22:14] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:22:14] [info] Sent response (121 bytes)
+[2026-03-02 08:22:15] [info] Client connected.
+[2026-03-02 08:22:15] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:22:15] [info] Sent response (121 bytes)
+[2026-03-02 08:22:16] [info] Client connected.
+[2026-03-02 08:22:16] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:22:16] [info] Sent response (121 bytes)
+[2026-03-02 08:22:17] [info] Client connected.
+[2026-03-02 08:22:17] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 08:22:17] [info] Sent response (126 bytes)
+[2026-03-02 08:22:17] [info] Client connected.
+[2026-03-02 08:22:17] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 08:22:17] [info] Sent response (126 bytes)
+[2026-03-02 08:22:19] [info] Client connected.
+[2026-03-02 08:22:19] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 08:22:19] [info] Sent response (126 bytes)
+[2026-03-02 08:23:38] [info] Client connected.
+[2026-03-02 08:23:38] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:38] [info] Sent response (118 bytes)
+[2026-03-02 08:23:40] [info] Client connected.
+[2026-03-02 08:23:40] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:40] [info] Sent response (118 bytes)
+[2026-03-02 08:23:40] [info] Client connected.
+[2026-03-02 08:23:40] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:40] [info] Sent response (280 bytes)
+[2026-03-02 08:23:41] [info] Client connected.
+[2026-03-02 08:23:41] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:41] [info] Sent response (118 bytes)
+[2026-03-02 08:23:42] [info] Client connected.
+[2026-03-02 08:23:42] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:42] [info] Sent response (280 bytes)
+[2026-03-02 08:23:42] [info] Client connected.
+[2026-03-02 08:23:42] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:42] [info] Sent response (120 bytes)
+[2026-03-02 08:23:43] [info] Client connected.
+[2026-03-02 08:23:43] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:43] [info] Sent response (118 bytes)
+[2026-03-02 08:23:44] [info] Client connected.
+[2026-03-02 08:23:44] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:44] [info] Sent response (280 bytes)
+[2026-03-02 08:23:44] [info] Client connected.
+[2026-03-02 08:23:44] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:44] [info] Sent response (120 bytes)
+[2026-03-02 08:23:44] [info] Client connected.
+[2026-03-02 08:23:44] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:44] [info] Sent response (108 bytes)
+[2026-03-02 08:23:45] [info] Client connected.
+[2026-03-02 08:23:45] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:45] [info] Sent response (280 bytes)
+[2026-03-02 08:23:46] [info] Client connected.
+[2026-03-02 08:23:46] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:46] [info] Sent response (120 bytes)
+[2026-03-02 08:23:46] [info] Client connected.
+[2026-03-02 08:23:46] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:46] [info] Sent response (108 bytes)
+[2026-03-02 08:23:46] [info] Client connected.
+[2026-03-02 08:23:46] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:46] [info] Sent response (121 bytes)
+[2026-03-02 08:23:47] [info] Client connected.
+[2026-03-02 08:23:47] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:47] [info] Sent response (120 bytes)
+[2026-03-02 08:23:48] [info] Client connected.
+[2026-03-02 08:23:48] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:48] [info] Sent response (108 bytes)
+[2026-03-02 08:23:48] [info] Client connected.
+[2026-03-02 08:23:48] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:48] [info] Sent response (121 bytes)
+[2026-03-02 08:23:48] [info] Client connected.
+[2026-03-02 08:23:48] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 08:23:48] [info] Sent response (126 bytes)
+[2026-03-02 08:23:49] [info] Client connected.
+[2026-03-02 08:23:49] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:49] [info] Sent response (108 bytes)
+[2026-03-02 08:23:50] [info] Client connected.
+[2026-03-02 08:23:50] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:50] [info] Sent response (121 bytes)
+[2026-03-02 08:23:50] [info] Client connected.
+[2026-03-02 08:23:50] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 08:23:50] [info] Sent response (126 bytes)
+[2026-03-02 08:23:52] [info] Client connected.
+[2026-03-02 08:23:52] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:23:52] [info] Sent response (121 bytes)
+[2026-03-02 08:23:52] [info] Client connected.
+[2026-03-02 08:23:52] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 08:23:52] [info] Sent response (126 bytes)
+[2026-03-02 08:23:54] [info] Client connected.
+[2026-03-02 08:23:54] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 08:23:54] [info] Sent response (126 bytes)
+[2026-03-02 08:25:06] [info] Server shutting down due to console event
+[2026-03-02 08:25:06] [info] Stop signal received. Server loop will exit.
+[2026-03-02 08:25:06] [error] accept() failed with error: 10004
+[2026-03-02 08:25:06] [warning] Failed to accept client connection.
+[2026-03-02 08:25:06] [info] Server stopped.
+[2026-03-02 08:25:06] [info] Server shutting down...
+[2026-03-02 08:25:06] [info] Server socket closed.
+[2026-03-02 08:25:06] [info] Server object destroyed.
+[2026-03-02 08:44:50] [info] Server starting up...
+[2026-03-02 08:44:50] [info] Server object created on port 8080
+[2026-03-02 08:44:50] [info] Socket created successfully.
+[2026-03-02 08:44:50] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-02 08:44:50] [info] Socket bound successfully to port 8080
+[2026-03-02 08:44:50] [info] Server is now listening on port 8080
+[2026-03-02 08:44:50] [info] Server running on port 8080
+[2026-03-02 08:47:11] [info] Client connected.
+[2026-03-02 08:47:11] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:11] [info] Sent response (118 bytes)
+[2026-03-02 08:47:13] [info] Client connected.
+[2026-03-02 08:47:13] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:13] [info] Sent response (118 bytes)
+[2026-03-02 08:47:13] [info] Client connected.
+[2026-03-02 08:47:13] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:13] [info] Sent response (280 bytes)
+[2026-03-02 08:47:14] [info] Client connected.
+[2026-03-02 08:47:14] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:14] [info] Sent response (118 bytes)
+[2026-03-02 08:47:15] [info] Client connected.
+[2026-03-02 08:47:15] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:15] [info] Sent response (280 bytes)
+[2026-03-02 08:47:15] [info] Client connected.
+[2026-03-02 08:47:15] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:15] [info] Sent response (120 bytes)
+[2026-03-02 08:47:16] [info] Client connected.
+[2026-03-02 08:47:16] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:16] [info] Sent response (118 bytes)
+[2026-03-02 08:47:16] [info] Client connected.
+[2026-03-02 08:47:16] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:16] [info] Sent response (280 bytes)
+[2026-03-02 08:47:17] [info] Client connected.
+[2026-03-02 08:47:17] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:17] [info] Sent response (120 bytes)
+[2026-03-02 08:47:18] [info] Client connected.
+[2026-03-02 08:47:18] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:18] [info] Sent response (108 bytes)
+[2026-03-02 08:47:18] [info] Client connected.
+[2026-03-02 08:47:18] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:18] [info] Sent response (280 bytes)
+[2026-03-02 08:47:18] [info] Client connected.
+[2026-03-02 08:47:18] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:18] [info] Sent response (120 bytes)
+[2026-03-02 08:47:19] [info] Client connected.
+[2026-03-02 08:47:19] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:19] [info] Sent response (108 bytes)
+[2026-03-02 08:47:20] [info] Client connected.
+[2026-03-02 08:47:20] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:20] [info] Sent response (121 bytes)
+[2026-03-02 08:47:20] [info] Client connected.
+[2026-03-02 08:47:20] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:20] [info] Sent response (120 bytes)
+[2026-03-02 08:47:20] [info] Client connected.
+[2026-03-02 08:47:20] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:20] [info] Sent response (108 bytes)
+[2026-03-02 08:47:21] [info] Client connected.
+[2026-03-02 08:47:21] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:21] [info] Sent response (121 bytes)
+[2026-03-02 08:47:22] [info] Client connected.
+[2026-03-02 08:47:22] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 08:47:22] [info] Sent response (126 bytes)
+[2026-03-02 08:47:22] [info] Client connected.
+[2026-03-02 08:47:22] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:22] [info] Sent response (108 bytes)
+[2026-03-02 08:47:22] [info] Client connected.
+[2026-03-02 08:47:22] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:22] [info] Sent response (121 bytes)
+[2026-03-02 08:47:23] [info] Client connected.
+[2026-03-02 08:47:23] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 08:47:23] [info] Sent response (126 bytes)
+[2026-03-02 08:47:24] [info] Client connected.
+[2026-03-02 08:47:24] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:47:24] [info] Sent response (121 bytes)
+[2026-03-02 08:47:24] [info] Client connected.
+[2026-03-02 08:47:24] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 08:47:24] [info] Sent response (126 bytes)
+[2026-03-02 08:47:26] [info] Client connected.
+[2026-03-02 08:47:26] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 08:47:26] [info] Sent response (126 bytes)
+[2026-03-02 08:49:05] [info] Server shutting down due to console event
+[2026-03-02 08:49:05] [info] Stop signal received. Server loop will exit.
+[2026-03-02 08:49:05] [error] accept() failed with error: 10004
+[2026-03-02 08:49:05] [warning] Failed to accept client connection.
+[2026-03-02 08:49:05] [info] Server stopped.
+[2026-03-02 08:49:05] [info] Server shutting down...
+[2026-03-02 08:49:05] [info] Server socket closed.
+[2026-03-02 08:49:05] [info] Server object destroyed.
+[2026-03-02 08:55:27] [info] Server starting up...
+[2026-03-02 08:55:27] [info] Server object created on port 8080
+[2026-03-02 08:55:27] [info] Socket created successfully.
+[2026-03-02 08:55:27] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-02 08:55:27] [info] Socket bound successfully to port 8080
+[2026-03-02 08:55:27] [info] Server is now listening on port 8080
+[2026-03-02 08:55:27] [info] Server running on port 8080
+[2026-03-02 08:55:59] [info] Client connected.
+[2026-03-02 08:55:59] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:55:59] [info] Sent response (118 bytes)
+[2026-03-02 08:56:01] [info] Client connected.
+[2026-03-02 08:56:01] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:56:01] [info] Sent response (280 bytes)
+[2026-03-02 08:56:03] [info] Client connected.
+[2026-03-02 08:56:03] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:56:03] [info] Sent response (120 bytes)
+[2026-03-02 08:56:05] [info] Client connected.
+[2026-03-02 08:56:05] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:56:05] [info] Sent response (108 bytes)
+[2026-03-02 08:56:07] [info] Client connected.
+[2026-03-02 08:56:07] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:56:07] [info] Sent response (121 bytes)
+[2026-03-02 08:56:10] [info] Client connected.
+[2026-03-02 08:56:10] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 08:56:10] [info] Sent response (126 bytes)
+[2026-03-02 08:56:12] [info] Client connected.
+[2026-03-02 08:56:12] [info] Raw HTTP request received:
+GET /doesnotexist HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:56:12] [info] Sent response (181 bytes)
+[2026-03-02 08:56:49] [info] Client connected.
+[2026-03-02 08:56:49] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:56:49] [info] Sent response (118 bytes)
+[2026-03-02 08:56:51] [info] Client connected.
+[2026-03-02 08:56:51] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:56:51] [info] Sent response (280 bytes)
+[2026-03-02 08:56:53] [info] Client connected.
+[2026-03-02 08:56:53] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:56:53] [info] Sent response (120 bytes)
+[2026-03-02 08:56:56] [info] Client connected.
+[2026-03-02 08:56:56] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:56:56] [info] Sent response (108 bytes)
+[2026-03-02 08:56:58] [info] Client connected.
+[2026-03-02 08:56:58] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:56:58] [info] Sent response (121 bytes)
+[2026-03-02 08:57:00] [info] Client connected.
+[2026-03-02 08:57:00] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 08:57:00] [info] Sent response (126 bytes)
+[2026-03-02 08:57:02] [info] Client connected.
+[2026-03-02 08:57:02] [info] Raw HTTP request received:
+GET /doesnotexist HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 08:57:02] [info] Sent response (181 bytes)
+[2026-03-02 08:57:04] [info] Client connected.
+[2026-03-02 08:57:04] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 2
+Content-Type: application/json
+
+{}
+[2026-03-02 08:57:04] [info] Sent response (108 bytes)
+[2026-03-02 09:01:49] [info] Server shutting down due to console event
+[2026-03-02 09:01:49] [info] Stop signal received. Server loop will exit.
+[2026-03-02 09:01:49] [error] accept() failed with error: 10004
+[2026-03-02 09:01:49] [warning] Failed to accept client connection.
+[2026-03-02 09:01:49] [info] Server stopped.
+[2026-03-02 09:01:49] [info] Server shutting down...
+[2026-03-02 09:01:49] [info] Server socket closed.
+[2026-03-02 09:01:49] [info] Server object destroyed.
+[2026-03-02 09:02:05] [info] Server starting up...
+[2026-03-02 09:02:05] [info] Server object created on port 8080
+[2026-03-02 09:02:05] [info] Socket created successfully.
+[2026-03-02 09:02:05] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-02 09:02:05] [info] Socket bound successfully to port 8080
+[2026-03-02 09:02:05] [info] Server is now listening on port 8080
+[2026-03-02 09:02:05] [info] Server running on port 8080
+[2026-03-02 09:02:14] [info] Client connected.
+[2026-03-02 09:02:14] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:02:14] [info] Sent response (118 bytes)
+[2026-03-02 09:02:16] [info] Client connected.
+[2026-03-02 09:02:16] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:02:16] [info] Sent response (280 bytes)
+[2026-03-02 09:02:18] [info] Client connected.
+[2026-03-02 09:02:18] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:02:18] [info] Sent response (120 bytes)
+[2026-03-02 09:02:20] [info] Client connected.
+[2026-03-02 09:02:20] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:02:20] [info] Sent response (108 bytes)
+[2026-03-02 09:02:22] [info] Client connected.
+[2026-03-02 09:02:22] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:02:22] [info] Sent response (121 bytes)
+[2026-03-02 09:02:24] [info] Client connected.
+[2026-03-02 09:02:24] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 09:02:24] [info] Sent response (126 bytes)
+[2026-03-02 09:02:26] [info] Client connected.
+[2026-03-02 09:02:26] [info] Raw HTTP request received:
+GET /doesnotexist HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:02:26] [info] Sent response (181 bytes)
+[2026-03-02 09:02:28] [info] Client connected.
+[2026-03-02 09:02:28] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 2
+Content-Type: application/json
+
+{}
+[2026-03-02 09:02:28] [info] Sent response (119 bytes)
+[2026-03-02 09:05:45] [info] Server shutting down due to console event
+[2026-03-02 09:05:45] [info] Stop signal received. Server loop will exit.
+[2026-03-02 09:05:45] [error] accept() failed with error: 10004
+[2026-03-02 09:05:45] [warning] Failed to accept client connection.
+[2026-03-02 09:05:45] [info] Server stopped.
+[2026-03-02 09:05:45] [info] Server shutting down...
+[2026-03-02 09:05:45] [info] Server socket closed.
+[2026-03-02 09:05:45] [info] Server object destroyed.
+[2026-03-02 09:06:04] [info] Server starting up...
+[2026-03-02 09:06:04] [info] Server object created on port 8080
+[2026-03-02 09:06:04] [info] Socket created successfully.
+[2026-03-02 09:06:04] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-02 09:06:04] [info] Socket bound successfully to port 8080
+[2026-03-02 09:06:04] [info] Server is now listening on port 8080
+[2026-03-02 09:06:04] [info] Server running on port 8080
+[2026-03-02 09:07:55] [info] Client connected.
+[2026-03-02 09:07:55] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:07:55] [info] Sent response (118 bytes)
+[2026-03-02 09:07:57] [info] Client connected.
+[2026-03-02 09:07:57] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:07:57] [info] Sent response (118 bytes)
+[2026-03-02 09:07:57] [info] Client connected.
+[2026-03-02 09:07:57] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:07:57] [info] Sent response (280 bytes)
+[2026-03-02 09:07:58] [info] Client connected.
+[2026-03-02 09:07:58] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:07:58] [info] Sent response (118 bytes)
+[2026-03-02 09:07:59] [info] Client connected.
+[2026-03-02 09:07:59] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:07:59] [info] Sent response (280 bytes)
+[2026-03-02 09:07:59] [info] Client connected.
+[2026-03-02 09:07:59] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:07:59] [info] Sent response (120 bytes)
+[2026-03-02 09:08:00] [info] Client connected.
+[2026-03-02 09:08:00] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:00] [info] Sent response (118 bytes)
+[2026-03-02 09:08:00] [info] Client connected.
+[2026-03-02 09:08:00] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:00] [info] Sent response (280 bytes)
+[2026-03-02 09:08:01] [info] Client connected.
+[2026-03-02 09:08:01] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:01] [info] Sent response (120 bytes)
+[2026-03-02 09:08:01] [info] Client connected.
+[2026-03-02 09:08:01] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:01] [info] Sent response (108 bytes)
+[2026-03-02 09:08:02] [info] Client connected.
+[2026-03-02 09:08:02] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:02] [info] Sent response (118 bytes)
+[2026-03-02 09:08:02] [info] Client connected.
+[2026-03-02 09:08:02] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:02] [info] Sent response (280 bytes)
+[2026-03-02 09:08:02] [info] Client connected.
+[2026-03-02 09:08:02] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:02] [info] Sent response (120 bytes)
+[2026-03-02 09:08:03] [info] Client connected.
+[2026-03-02 09:08:03] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:03] [info] Sent response (108 bytes)
+[2026-03-02 09:08:03] [info] Client connected.
+[2026-03-02 09:08:03] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:03] [info] Sent response (121 bytes)
+[2026-03-02 09:08:04] [info] Client connected.
+[2026-03-02 09:08:04] [info] Raw HTTP request received:
+GET /page HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:04] [info] Sent response (280 bytes)
+[2026-03-02 09:08:04] [info] Client connected.
+[2026-03-02 09:08:04] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:04] [info] Sent response (120 bytes)
+[2026-03-02 09:08:05] [info] Client connected.
+[2026-03-02 09:08:05] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:05] [info] Sent response (108 bytes)
+[2026-03-02 09:08:05] [info] Client connected.
+[2026-03-02 09:08:05] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:05] [info] Sent response (121 bytes)
+[2026-03-02 09:08:05] [info] Client connected.
+[2026-03-02 09:08:05] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 09:08:05] [info] Sent response (126 bytes)
+[2026-03-02 09:08:06] [info] Client connected.
+[2026-03-02 09:08:06] [info] Raw HTTP request received:
+GET /data HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:06] [info] Sent response (120 bytes)
+[2026-03-02 09:08:06] [info] Client connected.
+[2026-03-02 09:08:06] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:06] [info] Sent response (108 bytes)
+[2026-03-02 09:08:07] [info] Client connected.
+[2026-03-02 09:08:07] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:07] [info] Sent response (121 bytes)
+[2026-03-02 09:08:07] [info] Client connected.
+[2026-03-02 09:08:07] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 09:08:07] [info] Sent response (126 bytes)
+[2026-03-02 09:08:07] [info] Client connected.
+[2026-03-02 09:08:07] [info] Raw HTTP request received:
+GET /doesnotexist HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:07] [info] Sent response (181 bytes)
+[2026-03-02 09:08:08] [info] Client connected.
+[2026-03-02 09:08:08] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:08] [info] Sent response (108 bytes)
+[2026-03-02 09:08:08] [info] Client connected.
+[2026-03-02 09:08:08] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:08] [info] Sent response (121 bytes)
+[2026-03-02 09:08:09] [info] Client connected.
+[2026-03-02 09:08:09] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 09:08:09] [info] Sent response (126 bytes)
+[2026-03-02 09:08:09] [info] Client connected.
+[2026-03-02 09:08:09] [info] Raw HTTP request received:
+GET /doesnotexist HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:09] [info] Sent response (181 bytes)
+[2026-03-02 09:08:09] [info] Client connected.
+[2026-03-02 09:08:09] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 2
+Content-Type: application/json
+
+{}
+[2026-03-02 09:08:09] [info] Sent response (119 bytes)
+[2026-03-02 09:08:10] [info] Client connected.
+[2026-03-02 09:08:10] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:10] [info] Sent response (121 bytes)
+[2026-03-02 09:08:10] [info] Client connected.
+[2026-03-02 09:08:10] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 09:08:10] [info] Sent response (126 bytes)
+[2026-03-02 09:08:11] [info] Client connected.
+[2026-03-02 09:08:11] [info] Raw HTTP request received:
+GET /doesnotexist HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:11] [info] Sent response (181 bytes)
+[2026-03-02 09:08:11] [info] Client connected.
+[2026-03-02 09:08:11] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 2
+Content-Type: application/json
+
+{}
+[2026-03-02 09:08:11] [info] Sent response (119 bytes)
+[2026-03-02 09:08:12] [info] Client connected.
+[2026-03-02 09:08:12] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 20
+Content-Type: application/json
+
+{"data": "TestData"}
+[2026-03-02 09:08:12] [info] Sent response (126 bytes)
+[2026-03-02 09:08:12] [info] Client connected.
+[2026-03-02 09:08:12] [info] Raw HTTP request received:
+GET /doesnotexist HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:12] [info] Sent response (181 bytes)
+[2026-03-02 09:08:13] [info] Client connected.
+[2026-03-02 09:08:13] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 2
+Content-Type: application/json
+
+{}
+[2026-03-02 09:08:13] [info] Sent response (119 bytes)
+[2026-03-02 09:08:14] [info] Client connected.
+[2026-03-02 09:08:14] [info] Raw HTTP request received:
+GET /doesnotexist HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+
+
+[2026-03-02 09:08:14] [info] Sent response (181 bytes)
+[2026-03-02 09:08:14] [info] Client connected.
+[2026-03-02 09:08:14] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 2
+Content-Type: application/json
+
+{}
+[2026-03-02 09:08:14] [info] Sent response (119 bytes)
+[2026-03-02 09:08:16] [info] Client connected.
+[2026-03-02 09:08:16] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.32.5
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+Connection: keep-alive
+Content-Length: 2
+Content-Type: application/json
+
+{}
+[2026-03-02 09:08:16] [info] Sent response (119 bytes)
+[2026-03-02 09:08:35] [info] Server shutting down due to console event
+[2026-03-02 09:08:35] [info] Stop signal received. Server loop will exit.
+[2026-03-02 09:08:35] [error] accept() failed with error: 10004
+[2026-03-02 09:08:35] [warning] Failed to accept client connection.
+[2026-03-02 09:08:35] [info] Server stopped.
+[2026-03-02 09:08:35] [info] Server shutting down...
+[2026-03-02 09:08:35] [info] Server socket closed.
+[2026-03-02 09:08:35] [info] Server object destroyed.

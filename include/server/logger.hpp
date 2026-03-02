@@ -3,29 +3,24 @@
 #define LOGGER_HPP
 
 #include <string>
-#include <fstream>
+#include "spdlog/spdlog.h"
 
-enum class ELogLevel
-{
+enum class ELogLevel {
     INFO,
     WARNING,
     LOG_ERROR
 };
 
-class Logger
+class Logger 
 {
 private:
-    std::string sLogFilePath;       // Path to log file
-    std::ofstream rLogStream;       // File stream for logging
+    std::string sLogFilePath;
 
 public:
     Logger(const std::string& sPath);
-
     ~Logger();
 
-    // Log a message with severity level
     void Log(const std::string& sMessage, ELogLevel eLevel);
-
     bool IsReady() const;
 };
 
