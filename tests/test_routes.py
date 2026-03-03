@@ -38,3 +38,11 @@ def test_submit():
     r = requests.post(f"{BASE_URL}/submit", json=payload)
     assert r.status_code == 200
     assert "TestData" in r.text
+
+def test_not_found():
+    r = requests.get(f"{BASE_URL}/doesnotexist")
+    assert r.status_code == 404
+
+def test_submit_invalid():
+    r = requests.post(f"{BASE_URL}/submit", json={})
+    assert r.status_code == 400 or "error" in r.text.lower()

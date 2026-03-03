@@ -17,11 +17,11 @@ class Router;
 class CServer
 {
 private:
-    int iPort;              // Port number to listen on
-    int iServerFd;          // File descriptor for server socket
-    Router& rRouter;        // Reference to router for handling requests
-    bool bIsRunning;        // Flag to control server loop
-    Logger& rLogger;        //understand all hungarian notations..
+    int iPort;                                  // Port number to listen on
+    int iServerFd;                              // File descriptor for server socket
+    Router& rRouter;                            // Reference to router for handling requests
+    bool bIsRunning;                            // Flag to control server loop
+    Logger& rLogger;                            //understand all hungarian notations..
 
 public:
     CServer(int iPort, Router& rRouter, Logger& rLogger);

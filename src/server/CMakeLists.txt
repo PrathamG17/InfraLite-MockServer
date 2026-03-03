@@ -6,6 +6,7 @@ add_library(server
     response.cpp
     config_loader.cpp
     file_handler.cpp 
-    logger.cpp)
+    logger.cpp 
+    threadpool.cpp)
 
 target_include_directories(server PUBLIC ${CMAKE_SOURCE_DIR}/include/server)

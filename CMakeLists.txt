@@ -7,6 +7,11 @@ set(CMAKE_CXX_STANDARD 17)
 # Add include directories
 include_directories(include)
 
+# Ensure MSVC compiles with UTF-8
+if (MSVC)
+    add_compile_options(/utf-8)
+endif()
+
 # Add subdirectories for modular code
 add_subdirectory(src/server)
 # Later you will add:

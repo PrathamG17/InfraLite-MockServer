@@ -1,86 +1,51 @@
 #include "logger.hpp"
-#include <sstream>
+#include "spdlog/sinks/basic_file_sink.h"
 #include <iostream>
-#include <chrono>
-#include <ctime>
-#include <iomanip>
 
-Logger::Logger(const std::string& sPath): sLogFilePath(sPath)
+Logger::Logger(const std::string& sPath) : sLogFilePath(sPath) 
 {
-    try
+    try 
     {
-        rLogStream.open(sLogFilePath, std::ios::app);
-        if (!rLogStream.is_open())
-        {
-            std::cerr << "Logger: Failed to open log file " << sLogFilePath << std::endl;
-        }
+        // Create a file logger with the same format as your old logger
+        auto file_logger = spdlog::basic_logger_mt("file_logger", sLogFilePath);
+
+        // Set custom pattern: [YYYY-MM-DD HH:MM:SS] [LEVEL] message
+        spdlog::set_pattern("[%Y-%m-%d %H:%M:%S] [%l] %v");
+
+        spdlog::set_default_logger(file_logger);
+        spdlog::flush_on(spdlog::level::info); // flush immediately on INFO+
     }
-    catch (const std::exception& ex)
+    catch (const spdlog::spdlog_ex& ex) 
     {
-        std::cerr << "Logger: Exception opening log file -> " << ex.what() << std::endl;
+        std::cerr << "Logger init failed: " << ex.what() << std::endl;
     }
 }
 
-Logger::~Logger()
+Logger::~Logger() 
 {
-    if (rLogStream.is_open())
+    spdlog::shutdown();
+}
+
+void Logger::Log(const std::string& sMessage, ELogLevel eLevel) 
+{
+    switch (eLevel) 
     {
-        rLogStream.close();
+        case ELogLevel::INFO:
+            spdlog::info(sMessage);
+            break;
+    
+        case ELogLevel::WARNING:
+            spdlog::warn(sMessage);
+            break;
+    
+        case ELogLevel::LOG_ERROR:
+            spdlog::error(sMessage);
+            break;
     }
 }
 
-void Logger::Log(const std::string& sMessage, ELogLevel eLevel)
+bool Logger::IsReady() const 
 {
-    try
-    {
-        if (!IsReady())
-        {
-            std::cerr << "Logger: Not ready, message skipped -> " << sMessage << std::endl;
-            return;
-        }
-
-        // Get current timestamp
-        auto tNow = std::chrono::system_clock::now();
-        std::time_t tTime = std::chrono::system_clock::to_time_t(tNow);
-        std::tm tmLocal{};
-
-        // Windows safe version only
-        localtime_s(&tmLocal, &tTime);
-
-        // Format timestamp
-        std::ostringstream rTimeStream;
-        rTimeStream << std::put_time(&tmLocal, "%Y-%m-%d %H:%M:%S");
-
-        // Convert log level to string
-        std::string sLevel;
-        switch (eLevel)
-        {
-            case ELogLevel::INFO:    
-                sLevel = "INFO"; 
-                break;
-
-            case ELogLevel::WARNING: 
-                sLevel = "WARNING"; 
-                break;
-
-            case ELogLevel::LOG_ERROR:   
-                sLevel = "ERROR"; 
-                break;
-        }
-
-        // Write formatted log entry
-        rLogStream << "[" << rTimeStream.str() << "] " << "[" << sLevel << "] " << sMessage << std::endl;
-
-        // Flush immediately
-        rLogStream.flush();
-    }
-    catch (const std::exception& ex)
-    {
-        Log("Logger: Exception during Log -> " + static_cast<std::string>(ex.what()), ELogLevel::LOG_ERROR);
-    }
-}
-
-bool Logger::IsReady() const
-{
-    return rLogStream.is_open() && rLogStream.good();
+    // spdlog manages readiness internally
+    return true;
 }

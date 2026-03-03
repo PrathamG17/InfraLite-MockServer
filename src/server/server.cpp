@@ -2,6 +2,7 @@
 #include "router.hpp"
 #include "request.hpp"
 #include "response.hpp"
+#include "threadpool.hpp"
 #include <iostream>
 #pragma comment(lib, "Ws2_32.lib")
 
@@ -31,6 +32,8 @@ void CServer::Run()
     bIsRunning = true;
     rLogger.Log("Server running on port " + std::to_string(iPort), ELogLevel::INFO);
 
+    ThreadPool pool(std::thread::hardware_concurrency()); // e.g. number of cores
+
     // Step 2: Main accept loop
     while (bIsRunning)
     {
@@ -43,7 +46,11 @@ void CServer::Run()
         }
 
         // Step 3: Handle the client request/response cycle
-        HandleClient(iClientFd);
+            //HandleClient(iClientFd);
+        // Submit client handling to thread pool
+        pool.enqueue([this, iClientFd]() {
+            HandleClient(iClientFd);
+            });
     }
 
     // Step 4: Cleanup when loop ends
