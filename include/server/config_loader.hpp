@@ -12,6 +12,9 @@ struct RouteDef
     std::string sPath;         // "/api/data"
     std::string sResponseType; // "json", "xml", "html", "plain"
     std::string sResponseBody; // body content
+    int iStatusCode = 200;          // default HTTP status code
+    std::string sStatusText = "OK"; // default status text
+    int iDelayMs = 0;               // artificial delay in ms
 };
 
 class ConfigLoader

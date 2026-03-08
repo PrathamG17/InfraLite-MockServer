@@ -34,17 +34,26 @@ bool ConfigLoader::LoadConfig(Logger& rLogger)
         {
             RouteDef rDef;
 
-            if (jRoute.contains("method")) 
+            if (jRoute.contains("method"))
                 rDef.sMethod = jRoute["method"].get<std::string>();
 
-            if (jRoute.contains("path")) 
+            if (jRoute.contains("path"))
                 rDef.sPath = jRoute["path"].get<std::string>();
-            
-            if (jRoute.contains("responseType")) 
+
+            if (jRoute.contains("responseType"))
                 rDef.sResponseType = jRoute["responseType"].get<std::string>();
-            
-            if (jRoute.contains("responseBody")) 
+
+            if (jRoute.contains("responseBody"))
                 rDef.sResponseBody = jRoute["responseBody"].get<std::string>();
+
+            if (jRoute.contains("status"))
+                rDef.iStatusCode = jRoute["status"].get<int>();
+
+            if (jRoute.contains("statusText"))
+                rDef.sStatusText = jRoute["statusText"].get<std::string>();
+
+            if (jRoute.contains("delayMs"))
+                rDef.iDelayMs = jRoute["delayMs"].get<int>();
 
             vRoutes.push_back(rDef);
         }
