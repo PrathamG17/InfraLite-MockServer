@@ -25,12 +25,21 @@ void Router::LoadRoutes(const ConfigLoader& rConfig, Logger& rLogger)
             auto fnHandler = [rRoute, this](const HttpRequest& request) -> HttpResponse
                 {
                     HttpResponse rResponse;
-                    rResponse.iStatusCode = 200;
-                    rResponse.sStatusText = "OK";
-                    rResponse.eFormat = StringToFormat(rRoute.sResponseType);
-                    rResponse.sBody = rRoute.sResponseBody;
+
+                    // Delay simulation
+                    if (rRoute.iDelayMs > 0) {
+                        std::this_thread::sleep_for(std::chrono::milliseconds(rRoute.iDelayMs));
+                    }
+
+                    // Build response from config
+                    rResponse.iStatusCode = rRoute.iStatusCode;          // ? status code
+                    rResponse.sStatusText = rRoute.sStatusText;          // ? status text
+                    rResponse.eFormat = StringToFormat(rRoute.sResponseType); // ? format
+                    rResponse.sBody = rRoute.sResponseBody;              // ? body
+
                     return rResponse;
                 };
+
 
             mRoutes[sKey] = fnHandler;
         }
