@@ -1,5 +1,6 @@
 #output build folder
 out/
+build/
 
 #rough files
 Notes.txt
