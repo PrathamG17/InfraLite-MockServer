@@ -10,6 +10,15 @@
     <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\access_log_repository.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\static_file_repository.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\user_repository.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\server_config_repository.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\sqlite3.c">
       <Filter>Source Files</Filter>
     </ClCompile>

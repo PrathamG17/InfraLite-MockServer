@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <csignal>
 #include <filesystem>
+#include <unordered_map>
 #include "server.hpp"
 #include "router.hpp"
 #include "request.hpp"
@@ -12,6 +13,9 @@
 #include "db/database_handler.hpp"
 #include "db/route_repository.hpp"
 #include "db/access_log_repository.hpp"
+#include "db/static_file_repository.hpp"
+#include "db/user_repository.hpp"
+#include "db/server_config_repository.hpp"
 
 CServer* gServer = nullptr;
 Logger* gLogger = nullptr;
@@ -63,34 +67,91 @@ int main(void)
             return 1;
         }
 
-        RouteRepository rRepo(&rDB);
+        ServerConfigRepository rConfigRepo(&rDB);
+        rConfigRepo.CreateTable();
 
+        rConfigRepo.SetConfig("PORT", "8080", "Server listening port");
+        rConfigRepo.SetConfig("STATIC_DIR", "static", "Static files directory");
+        rConfigRepo.SetConfig("LOG_LEVEL", "INFO", "Logging level");
+
+        // first create a user
+        UserRepository rUserRepo(&rDB);
+        rUserRepo.CreateTable();
+
+        int adminId = rUserRepo.AddUser(
+            "admin",
+            "admin12hash",
+            "admin"
+        );
+
+        RouteRepository rRepo(&rDB);
         // create table if not exists
         rRepo.CreateTable();
 
+        // testing static file table
+        StaticFileRepository rFileRepo(&rDB);
+        rFileRepo.CreateTable();
+
+
         // Inssert test route
-        rRepo.AddRoute("GET", "/dbhello", 200, "Hello From SQLite");
-        rRepo.AddRoute("GET", "/dbtest", 200, "<h1>Second DB route!!<h1>");
+        rRepo.AddRoute(adminId, "GET", "/dbhello", 200, "");
+        rFileRepo.AddFile(1, "index.html", "text/html");
+        rRepo.AddRoute(adminId, "GET", "/dbtest", 200, "<h1>Second DB route!!<h1>");
+
+        int bannerID = rRepo.AddRoute(adminId, "GET", "/banner", 200, "");
+        rFileRepo.AddFile(bannerID, "index.html", "text/html");
+
+        int logoID = rRepo.AddRoute(adminId, "GET", "/logo", 200, "");
+        rFileRepo.AddFile(logoID, "index.html", "text/html");
 
         // Read routes and print to console
         auto routes = rRepo.GetRoutes();
+        auto files = rFileRepo.GetFiles();
+
+        std::unordered_map<int, StaticFile> fileMap;
+
+        for(const auto& f : files)
+        {
+            fileMap[f.routeId] = f;
+        }
 
         for(const auto& r : routes)
         {
-            rLogger.Log("DB Route Loaded: " + r.method + " " + r.path, ELogLevel::INFO);
+            auto it = fileMap.find(r.routeId);
 
-            rRouter.AddRoute(r.method, r.path,
-                [r](const HttpRequest& req)
+            if (it != fileMap.end())
             {
-                HttpResponse resp;
+                StaticFile f = it->second;
 
-                resp.iStatusCode = r.responseStatus;
-                resp.sStatusText = "OK";
-                resp.mHeaders["Content-Type"] = "text/html";
-                resp.sBody = r.responseBody;
+                rLogger.Log("Static Route Loaded: " + r.method + " " + r.path, ELogLevel::INFO);
 
-                return resp;
-            });
+                rRouter.AddRoute(r.method, r.path,
+                    [&rFileHandler, f](const HttpRequest& req)
+                {
+                    std::cout << "STATIC HANDLER : " << f.filePath << std::endl;
+                    return rFileHandler.ServeFile(f.filePath);
+                });
+            }
+
+            else
+            {
+                rLogger.Log("DB Route Loaded: " + r.method + " " + r.path, ELogLevel::INFO);
+
+                rRouter.AddRoute(r.method, r.path,
+                    [r](const HttpRequest& req)
+                {
+                    HttpResponse resp;
+
+                    std::cout << "DB HANDLER" << std::endl;
+
+                    resp.iStatusCode = r.responseStatus;
+                    resp.sStatusText = "OK";
+                    resp.mHeaders["Content-Type"] = "text/html";
+                    resp.sBody = r.responseBody;
+
+                    return resp;
+                });
+            }
         }
 
         // Step 2: Register GET routes
@@ -136,17 +197,11 @@ int main(void)
         AccessLogRepository rLogRepo(&rDB);
         rLogRepo.CreateTable();
 
-        rLogRepo.AddLog(
-            "GET",
-            "/test",
-            200,
-            5,
-            "127.0.0.1",
-            "TestAgent"
-        );
-
         // Step 5: Initialize and run CServer
-        CServer rServer(8080, rRouter, rLogger, &rLogRepo);
+        // using ServerConfig Table for port number
+        int port = std::stoi(rConfigRepo.GetConfig("PORT"));
+
+        CServer rServer(port, rRouter, rLogger, &rLogRepo);
         gServer = &rServer;
         SetConsoleCtrlHandler(ConsoleHandler, TRUE);            //for windows only...
         rServer.Run(); // enters accept loop

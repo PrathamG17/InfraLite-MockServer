@@ -28,7 +28,8 @@ class RouteRepository
 
         bool CreateTable();
 
-        bool AddRoute(  const std::string& method,
+        int AddRoute(  int userId,
+                        const std::string& method,
                         const std::string& path,
                         int status,
                         const std::string& body

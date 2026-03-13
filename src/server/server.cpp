@@ -4,6 +4,7 @@
 #include "response.hpp"
 #include "threadpool.hpp"
 #include <iostream>
+#include <chrono>
 
 #include "db/access_log_repository.hpp"
 
@@ -171,6 +172,10 @@ void CServer::HandleClient(int iClientFd)
 {
     try
     {
+
+        // response time
+        auto startTime = std::chrono::high_resolution_clock::now();
+
         // Step 1: Read the raw HTTP request from the client
         std::string sRawRequest = ReadRequest(iClientFd);
         if (sRawRequest.empty())
@@ -186,24 +191,44 @@ void CServer::HandleClient(int iClientFd)
         // Step 3: Route the request to the appropriate handler
         HttpResponse rResponse = rRouter.RouteRequest(rRequest);
 
-        // Insert entry in ACCESSLOG
-        if (m_pLogRepo)
-        {
-            m_pLogRepo->AddLog(
-                rRequest.GetMethod(),
-                rRequest.GetPath(),
-                rResponse.iStatusCode,
-                0,
-                "127.0.0.1",
-                "Unknown Agent"                
-            );
-        }
-
         // Step 4: Ensure mandatory headers (like Content-Length)
         rResponse.mHeaders["Content-Length"] = std::to_string(rResponse.sBody.size());
         if (rResponse.mHeaders.find("Content-Type") == rResponse.mHeaders.end())
         {
             rResponse.mHeaders["Content-Type"] = "text/html"; // default
+        }
+
+        // Insert entry in ACCESSLOG
+        if (m_pLogRepo)
+        {
+            // for user ip address
+            sockaddr_in clientAddr;
+            socklen_t len = sizeof(clientAddr);
+            getpeername(iClientFd, (sockaddr*)&clientAddr, &len);
+
+            char ip[INET_ADDRSTRLEN];
+            inet_ntop(AF_INET, &clientAddr.sin_addr, ip, INET_ADDRSTRLEN);
+
+
+            // for user agent info
+            std::string userAgent = rRequest.GetHeader("User-Agent");
+
+
+            // response time calculation
+            auto endTime = std::chrono::high_resolution_clock::now();
+            int responseTime = 
+                std::chrono::duration_cast<std::chrono::milliseconds>(
+                    endTime - startTime
+                ).count();
+
+            m_pLogRepo->AddLog(
+                rRequest.GetMethod(),
+                rRequest.GetPath(),
+                rResponse.iStatusCode,
+                responseTime,
+                ip,
+                userAgent            
+            );
         }
 
         // Step 5: Send the response back to the client

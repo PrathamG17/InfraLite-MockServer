@@ -22,36 +22,41 @@ bool RouteRepository::CreateTable()
         "CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,"
     
         "UNIQUE(Method, Path),"
-        "CHECK(Method IN ('GET', 'POST', 'PUT', 'DELETE'))"
+        "CHECK(Method IN ('GET', 'POST', 'PUT', 'DELETE')),"
+        "FOREIGN KEY(CreatedBy) REFERENCES USER(UserID)"
         ");";
 
     return m_pDB->Execute(sql);
 }
 
-bool RouteRepository::AddRoute( const std::string& method,
+int RouteRepository::AddRoute(  int userId,
+                                const std::string& method,
                                 const std::string& path,
                                 int status,
                                 const std::string& body)
 {
     // code
     const char* sql = 
-    "INSERT INTO MOCKROUTE (Method, Path, ResponseStatus, ResponseBody) VALUES (?, ?, ?, ?);";
+    "INSERT INTO MOCKROUTE (CreatedBy, Method, Path, ResponseStatus, ResponseBody) VALUES (?, ?, ?, ?, ?);";
 
     sqlite3_stmt* stmt = nullptr;
 
     if (sqlite3_prepare_v2(m_pDB->GetDB(), sql, -1, &stmt, nullptr) != SQLITE_OK)
-        return false;
+        return -1;
 
-    sqlite3_bind_text(stmt, 1, method.c_str(), -1, SQLITE_STATIC);
-    sqlite3_bind_text(stmt, 2, path.c_str(), -1, SQLITE_STATIC);
-    sqlite3_bind_int(stmt, 3, status);
-    sqlite3_bind_text(stmt, 4, body.c_str(), -1, SQLITE_STATIC);
+    sqlite3_bind_int(stmt, 1, userId);
+    sqlite3_bind_text(stmt, 2, method.c_str(), -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 3, path.c_str(), -1, SQLITE_STATIC);
+    sqlite3_bind_int(stmt, 4, status);
+    sqlite3_bind_text(stmt, 5, body.c_str(), -1, SQLITE_STATIC);
 
     bool success = sqlite3_step(stmt) == SQLITE_DONE;
 
     sqlite3_finalize(stmt);
 
-    return success;
+    int id = sqlite3_last_insert_rowid(m_pDB->GetDB());
+
+    return id;
 }
 
 std::vector<Route> RouteRepository::GetRoutes()

@@ -25,6 +25,7 @@ public:
 public:
     HttpResponse();
     std::string ToString() const;
+    std::string HttpResponse::GetHeader(const std::string& key) const;
 };
 
 #endif // RESPONSE_HPP

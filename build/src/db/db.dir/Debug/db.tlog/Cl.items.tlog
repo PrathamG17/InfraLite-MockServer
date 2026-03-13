@@ -1,4 +1,7 @@
 E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\database_handler.cpp;E:\COLLEGE\WebServer\InfraLite-MockServer\build\src\db\db.dir\Debug\database_handler.obj
 E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\route_repository.cpp;E:\COLLEGE\WebServer\InfraLite-MockServer\build\src\db\db.dir\Debug\route_repository.obj
 E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\access_log_repository.cpp;E:\COLLEGE\WebServer\InfraLite-MockServer\build\src\db\db.dir\Debug\access_log_repository.obj
+E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\static_file_repository.cpp;E:\COLLEGE\WebServer\InfraLite-MockServer\build\src\db\db.dir\Debug\static_file_repository.obj
+E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\user_repository.cpp;E:\COLLEGE\WebServer\InfraLite-MockServer\build\src\db\db.dir\Debug\user_repository.obj
+E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\server_config_repository.cpp;E:\COLLEGE\WebServer\InfraLite-MockServer\build\src\db\db.dir\Debug\server_config_repository.obj
 E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\sqlite3.c;E:\COLLEGE\WebServer\InfraLite-MockServer\build\src\db\db.dir\Debug\sqlite3.obj

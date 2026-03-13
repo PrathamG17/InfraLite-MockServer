@@ -311,6 +311,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\database_handler.cpp" />
     <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\route_repository.cpp" />
     <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\access_log_repository.cpp" />
+    <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\static_file_repository.cpp" />
+    <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\user_repository.cpp" />
+    <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\server_config_repository.cpp" />
     <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\db\sqlite3.c" />
   </ItemGroup>
   <ItemGroup />
