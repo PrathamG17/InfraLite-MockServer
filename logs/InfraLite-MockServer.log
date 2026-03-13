@@ -5545,3 +5545,102 @@ Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
 [2026-03-13 22:05:11] [info] Server shutting down...
 [2026-03-13 22:05:11] [info] Server socket closed.
 [2026-03-13 22:05:11] [info] Server object destroyed.
+[2026-03-13 22:16:24] [info] Server starting up...
+[2026-03-13 22:16:24] [info] Static Route Loaded: GET /dbhello
+[2026-03-13 22:16:24] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 22:16:24] [info] Static Route Loaded: GET /banner
+[2026-03-13 22:16:24] [info] Static Route Loaded: GET /logo
+[2026-03-13 22:16:24] [info] Server object created on port 8080
+[2026-03-13 22:16:24] [info] Socket created successfully.
+[2026-03-13 22:16:24] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 22:16:24] [info] Socket bound successfully to port 8080
+[2026-03-13 22:16:24] [info] Server is now listening on port 8080
+[2026-03-13 22:16:24] [info] Server running on port 8080
+[2026-03-13 22:16:35] [info] Client connected.
+[2026-03-13 22:16:35] [info] Raw HTTP request received:
+GET /dbhello HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 22:16:35] [info] Sent response (399 bytes)
+[2026-03-13 22:16:35] [info] Client connected.
+[2026-03-13 22:16:35] [info] Client connected.
+[2026-03-13 22:16:35] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 22:16:35] [info] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 22:16:35] [info] Sent response (200 bytes)
+[2026-03-13 22:16:35] [info] Sent response (7147 bytes)
+[2026-03-13 22:16:35] [info] Client connected.
+[2026-03-13 22:16:35] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 22:16:35] [info] Sent response (173 bytes)
+[2026-03-13 22:16:35] [info] Client connected.
+[2026-03-13 22:16:37] [info] Client disconnected.
+[2026-03-13 22:16:37] [warning] Empty request received.
+[2026-03-13 22:16:40] [info] Server shutting down due to console event
+[2026-03-13 22:16:40] [info] Stop signal received. Server loop will exit.
+[2026-03-13 22:16:40] [error] accept() failed with error: 10004
+[2026-03-13 22:16:40] [warning] Failed to accept client connection.
+[2026-03-13 22:16:40] [info] Server stopped.
+[2026-03-13 22:16:40] [info] Server shutting down...
+[2026-03-13 22:16:40] [info] Server socket closed.
+[2026-03-13 22:16:40] [info] Server object destroyed.
