@@ -4,10 +4,13 @@
 #include "response.hpp"
 #include "threadpool.hpp"
 #include <iostream>
+
+#include "db/access_log_repository.hpp"
+
 #pragma comment(lib, "Ws2_32.lib")
 
 // Constructor
-CServer::CServer(int iPort, Router& rRouter, Logger& pLogger) : iPort(iPort), rRouter(rRouter), iServerFd(-1), bIsRunning(false), rLogger(pLogger)
+CServer::CServer(int iPort, Router& rRouter, Logger& pLogger, AccessLogRepository* logRepo) : iPort(iPort), rRouter(rRouter), iServerFd(-1), bIsRunning(false), rLogger(pLogger), m_pLogRepo(logRepo)
 {
     rLogger.Log("Server object created on port " + std::to_string(iPort), ELogLevel::INFO);
 }
@@ -182,6 +185,19 @@ void CServer::HandleClient(int iClientFd)
 
         // Step 3: Route the request to the appropriate handler
         HttpResponse rResponse = rRouter.RouteRequest(rRequest);
+
+        // Insert entry in ACCESSLOG
+        if (m_pLogRepo)
+        {
+            m_pLogRepo->AddLog(
+                rRequest.GetMethod(),
+                rRequest.GetPath(),
+                rResponse.iStatusCode,
+                0,
+                "127.0.0.1",
+                "Unknown Agent"                
+            );
+        }
 
         // Step 4: Ensure mandatory headers (like Content-Length)
         rResponse.mHeaders["Content-Length"] = std::to_string(rResponse.sBody.size());

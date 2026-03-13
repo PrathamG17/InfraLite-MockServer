@@ -9,6 +9,10 @@
 #include "file_handler.hpp"
 #include "logger.hpp"
 
+#include "db/database_handler.hpp"
+#include "db/route_repository.hpp"
+#include "db/access_log_repository.hpp"
+
 CServer* gServer = nullptr;
 Logger* gLogger = nullptr;
 
@@ -18,6 +22,7 @@ BOOL WINAPI ConsoleHandler(DWORD signal);
 int main(void)
 {
     auto baseDir = GetProjectRoot();
+
     Logger rLogger((baseDir / "logs" / "InfraLite-MockServer.log").string());
     try
     {
@@ -42,6 +47,51 @@ int main(void)
         // Step 4: Initialize Router
         Router rRouter(&rFileHandler);
         rRouter.LoadRoutes(rConfig, rLogger);
+
+
+        // initialize Database Handler
+        std::filesystem::path dataDir = baseDir / "data";
+        std::filesystem::create_directories(dataDir);
+
+        std::filesystem::path dbPath = dataDir / "infralite.db";
+
+        DatabaseHandler rDB;
+
+        if(!rDB.Open(dbPath.string()))
+        {
+            std::cout << "Database Open() : Failed!!\n";
+            return 1;
+        }
+
+        RouteRepository rRepo(&rDB);
+
+        // create table if not exists
+        rRepo.CreateTable();
+
+        // Inssert test route
+        rRepo.AddRoute("GET", "/dbhello", 200, "Hello From SQLite");
+        rRepo.AddRoute("GET", "/dbtest", 200, "<h1>Second DB route!!<h1>");
+
+        // Read routes and print to console
+        auto routes = rRepo.GetRoutes();
+
+        for(const auto& r : routes)
+        {
+            rLogger.Log("DB Route Loaded: " + r.method + " " + r.path, ELogLevel::INFO);
+
+            rRouter.AddRoute(r.method, r.path,
+                [r](const HttpRequest& req)
+            {
+                HttpResponse resp;
+
+                resp.iStatusCode = r.responseStatus;
+                resp.sStatusText = "OK";
+                resp.mHeaders["Content-Type"] = "text/html";
+                resp.sBody = r.responseBody;
+
+                return resp;
+            });
+        }
 
         // Step 2: Register GET routes
         rRouter.AddRoute("GET", "/namaskar", [](const HttpRequest& rReq) {
@@ -82,8 +132,21 @@ int main(void)
             return rResp;
             });
 
+        // Create Access Log Repository table
+        AccessLogRepository rLogRepo(&rDB);
+        rLogRepo.CreateTable();
+
+        rLogRepo.AddLog(
+            "GET",
+            "/test",
+            200,
+            5,
+            "127.0.0.1",
+            "TestAgent"
+        );
+
         // Step 5: Initialize and run CServer
-        CServer rServer(8080, rRouter, rLogger);
+        CServer rServer(8080, rRouter, rLogger, &rLogRepo);
         gServer = &rServer;
         SetConsoleCtrlHandler(ConsoleHandler, TRUE);            //for windows only...
         rServer.Run(); // enters accept loop

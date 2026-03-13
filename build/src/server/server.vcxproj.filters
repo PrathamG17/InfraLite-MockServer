@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\server\server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\server\router.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\server\request.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\server\response.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\server\config_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\server\file_handler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\server\logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\server\threadpool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\COLLEGE\WebServer\InfraLite-MockServer\src\server\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A7914234-EEAC-36B3-9E2A-EDFC7F7E1C70}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
