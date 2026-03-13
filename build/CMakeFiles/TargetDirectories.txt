@@ -1,5 +1,0 @@
-E:/COLLEGE/WebServer/InfraLite-MockServer/build/CMakeFiles/infralite.dir
-E:/COLLEGE/WebServer/InfraLite-MockServer/build/CMakeFiles/ALL_BUILD.dir
-E:/COLLEGE/WebServer/InfraLite-MockServer/build/CMakeFiles/ZERO_CHECK.dir
-E:/COLLEGE/WebServer/InfraLite-MockServer/build/src/server/CMakeFiles/server.dir
-E:/COLLEGE/WebServer/InfraLite-MockServer/build/src/db/CMakeFiles/db.dir

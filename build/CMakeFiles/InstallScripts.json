@@ -1,9 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"E:/COLLEGE/WebServer/InfraLite-MockServer/build/cmake_install.cmake",
-		"E:/COLLEGE/WebServer/InfraLite-MockServer/build/src/server/cmake_install.cmake",
-		"E:/COLLEGE/WebServer/InfraLite-MockServer/build/src/db/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
