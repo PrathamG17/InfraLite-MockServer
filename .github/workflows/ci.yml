@@ -18,7 +18,7 @@ jobs:
       run: choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'
 
     - name: Create build directory
-      run: mkdir build
+      run: mkdir build -Force
 
     - name: Configure CMake
       run: |

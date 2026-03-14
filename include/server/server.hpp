@@ -11,6 +11,8 @@
 #include <ws2tcpip.h>
 #include <windows.h>
 
+#include "db/access_log_repository.hpp"
+
 // Forward declaration of Router
 class Router;
 
@@ -22,9 +24,10 @@ private:
     Router& rRouter;                            // Reference to router for handling requests
     bool bIsRunning;                            // Flag to control server loop
     Logger& rLogger;                            //understand all hungarian notations..
+    AccessLogRepository* m_pLogRepo;
 
 public:
-    CServer(int iPort, Router& rRouter, Logger& rLogger);
+    CServer(int iPort, Router& rRouter, Logger& rLogger, AccessLogRepository* logRepo);
 
     ~CServer();
 

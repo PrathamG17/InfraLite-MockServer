@@ -3149,3 +3149,2498 @@ Connection: keep-alive
 [2026-03-08 12:37:31] [info] Sent response (127 bytes)
 [2026-03-08 12:41:15] [info] Server shutting down due to console event
 [2026-03-08 12:41:15] [info] Stop signal received. Server loop will exit.
+[2026-03-12 20:38:36] [info] Server starting up...
+[2026-03-12 20:38:36] [info] Server object created on port 8080
+[2026-03-12 20:38:36] [info] Socket created successfully.
+[2026-03-12 20:38:36] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-12 20:38:36] [info] Socket bound successfully to port 8080
+[2026-03-12 20:38:36] [info] Server is now listening on port 8080
+[2026-03-12 20:38:36] [info] Server running on port 8080
+[2026-03-12 20:39:19] [info] Server shutting down due to console event
+[2026-03-12 20:39:19] [info] Stop signal received. Server loop will exit.
+[2026-03-12 20:39:19] [error] accept() failed with error: 10004
+[2026-03-12 20:39:19] [warning] Failed to accept client connection.
+[2026-03-12 20:39:19] [info] Server stopped.
+[2026-03-12 20:39:19] [info] Server shutting down...
+[2026-03-12 20:39:19] [info] Server socket closed.
+[2026-03-12 20:39:19] [info] Server object destroyed.
+[2026-03-12 20:40:56] [info] Server starting up...
+[2026-03-12 20:40:56] [info] Server object created on port 8080
+[2026-03-12 20:40:56] [info] Socket created successfully.
+[2026-03-12 20:40:56] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-12 20:40:56] [info] Socket bound successfully to port 8080
+[2026-03-12 20:40:56] [info] Server is now listening on port 8080
+[2026-03-12 20:40:56] [info] Server running on port 8080
+[2026-03-12 20:42:34] [info] Client connected.
+[2026-03-12 20:42:34] [info] Client connected.
+[2026-03-12 20:42:34] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 20:42:34] [info] Sent response (108 bytes)
+[2026-03-12 20:42:34] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/namaskar
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 20:42:34] [info] Sent response (173 bytes)
+[2026-03-12 20:42:35] [info] Client connected.
+[2026-03-12 20:42:44] [info] Raw HTTP request received:
+GET /json HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 20:42:44] [info] Sent response (121 bytes)
+[2026-03-12 20:42:45] [info] Client connected.
+[2026-03-12 20:43:01] [info] Raw HTTP request received:
+GET /hello HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 20:43:01] [info] Sent response (118 bytes)
+[2026-03-12 20:43:02] [info] Client connected.
+[2026-03-12 20:44:00] [info] Raw HTTP request received:
+GET /static HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 20:44:00] [info] Sent response (168 bytes)
+[2026-03-12 20:44:00] [info] Client connected.
+[2026-03-12 20:44:10] [info] Raw HTTP request received:
+GET /index.html HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 20:44:10] [info] Sent response (399 bytes)
+[2026-03-12 20:44:10] [info] Client connected.
+[2026-03-12 20:44:10] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/index.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 20:44:10] [info] Sent response (200 bytes)
+[2026-03-12 20:44:10] [info] Client connected.
+[2026-03-12 20:44:10] [info] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/index.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 20:44:10] [info] Sent response (7147 bytes)
+[2026-03-12 20:46:35] [info] Client connected.
+[2026-03-12 20:46:35] [info] Raw HTTP request received:
+POST /submit HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.18.0
+Accept: */*
+Content-Length: 12
+Content-Type: application/x-www-form-urlencoded
+
+name=Shreyas
+[2026-03-12 20:46:35] [info] Sent response (118 bytes)
+[2026-03-12 20:47:25] [info] Server shutting down due to console event
+[2026-03-12 20:47:25] [info] Stop signal received. Server loop will exit.
+[2026-03-12 20:47:25] [error] accept() failed with error: 10004
+[2026-03-12 20:47:25] [warning] Failed to accept client connection.
+[2026-03-12 20:47:25] [info] Server stopped.
+[2026-03-12 20:47:25] [info] Server shutting down...
+[2026-03-12 20:47:25] [info] Server socket closed.
+[2026-03-12 20:47:25] [info] Server object destroyed.
+[2026-03-12 21:59:33] [info] Server starting up...
+[2026-03-12 21:59:33] [info] Server object created on port 8080
+[2026-03-12 21:59:33] [info] Socket created successfully.
+[2026-03-12 21:59:33] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-12 21:59:33] [info] Socket bound successfully to port 8080
+[2026-03-12 21:59:33] [info] Server is now listening on port 8080
+[2026-03-12 21:59:33] [info] Server running on port 8080
+[2026-03-12 22:00:22] [info] Server shutting down due to console event
+[2026-03-12 22:00:22] [info] Stop signal received. Server loop will exit.
+[2026-03-12 22:00:22] [error] accept() failed with error: 10004
+[2026-03-12 22:00:22] [warning] Failed to accept client connection.
+[2026-03-12 22:00:22] [info] Server stopped.
+[2026-03-12 22:00:22] [info] Server shutting down...
+[2026-03-12 22:00:22] [info] Server socket closed.
+[2026-03-12 22:00:22] [info] Server object destroyed.
+[2026-03-12 22:00:48] [info] Server starting up...
+[2026-03-12 22:00:48] [info] Server object created on port 8080
+[2026-03-12 22:00:48] [info] Socket created successfully.
+[2026-03-12 22:00:48] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-12 22:00:48] [info] Socket bound successfully to port 8080
+[2026-03-12 22:00:48] [info] Server is now listening on port 8080
+[2026-03-12 22:00:48] [info] Server running on port 8080
+[2026-03-12 22:08:29] [info] Server shutting down due to console event
+[2026-03-12 22:08:29] [info] Stop signal received. Server loop will exit.
+[2026-03-12 22:08:29] [error] accept() failed with error: 10004
+[2026-03-12 22:08:29] [warning] Failed to accept client connection.
+[2026-03-12 22:08:29] [info] Server stopped.
+[2026-03-12 22:08:29] [info] Server shutting down...
+[2026-03-12 22:08:29] [info] Server socket closed.
+[2026-03-12 22:08:29] [info] Server object destroyed.
+[2026-03-12 22:09:16] [info] Server starting up...
+[2026-03-12 22:09:16] [info] DB Route Loaded: GET /dbhello
+[2026-03-12 22:09:16] [info] DB Route Loaded: GET /dbhello
+[2026-03-12 22:09:16] [info] Server object created on port 8080
+[2026-03-12 22:09:16] [info] Socket created successfully.
+[2026-03-12 22:09:16] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-12 22:09:16] [info] Socket bound successfully to port 8080
+[2026-03-12 22:09:16] [info] Server is now listening on port 8080
+[2026-03-12 22:09:16] [info] Server running on port 8080
+[2026-03-12 22:10:07] [info] Client connected.
+[2026-03-12 22:10:07] [info] Client connected.
+[2026-03-12 22:10:07] [info] Raw HTTP request received:
+GET /dbhello HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 22:10:07] [info] Sent response (108 bytes)
+[2026-03-12 22:10:07] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 22:10:07] [info] Sent response (173 bytes)
+[2026-03-12 22:10:07] [info] Client connected.
+[2026-03-12 22:11:13] [info] Server shutting down due to console event
+[2026-03-12 22:11:13] [info] Stop signal received. Server loop will exit.
+[2026-03-12 22:11:13] [error] accept() failed with error: 10004
+[2026-03-12 22:11:13] [warning] Failed to accept client connection.
+[2026-03-12 22:11:13] [info] Server stopped.
+[2026-03-12 22:11:17] [info] Server shutting down due to console event
+[2026-03-12 22:11:17] [info] Stop signal received. Server loop will exit.
+[2026-03-12 22:11:18] [info] Server shutting down due to console event
+[2026-03-12 22:11:18] [info] Stop signal received. Server loop will exit.
+[2026-03-12 22:11:23] [info] Server shutting down due to console event
+[2026-03-12 22:11:23] [info] Stop signal received. Server loop will exit.
+[2026-03-12 22:11:31] [info] Client disconnected.
+[2026-03-12 22:11:31] [warning] Empty request received.
+[2026-03-12 22:11:31] [info] Server shutting down...
+[2026-03-12 22:11:31] [info] Server socket closed.
+[2026-03-12 22:11:31] [info] Server object destroyed.
+[2026-03-12 22:12:03] [info] Server starting up...
+[2026-03-12 22:12:03] [info] DB Route Loaded: GET /dbhello
+[2026-03-12 22:12:03] [info] DB Route Loaded: GET /dbhello
+[2026-03-12 22:12:03] [info] DB Route Loaded: GET /dbhello
+[2026-03-12 22:12:03] [info] DB Route Loaded: GET /dbtest
+[2026-03-12 22:12:03] [info] Server object created on port 8080
+[2026-03-12 22:12:03] [info] Socket created successfully.
+[2026-03-12 22:12:03] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-12 22:12:03] [info] Socket bound successfully to port 8080
+[2026-03-12 22:12:03] [info] Server is now listening on port 8080
+[2026-03-12 22:12:03] [info] Server running on port 8080
+[2026-03-12 22:12:27] [info] Client connected.
+[2026-03-12 22:12:27] [info] Client connected.
+[2026-03-12 22:12:27] [info] Raw HTTP request received:
+GET /dbtest HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 22:12:27] [info] Sent response (116 bytes)
+[2026-03-12 22:12:27] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbtest
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 22:12:27] [info] Sent response (173 bytes)
+[2026-03-12 22:12:27] [info] Client connected.
+[2026-03-12 22:12:49] [info] Raw HTTP request received:
+GET /dbtest HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 22:12:49] [info] Sent response (116 bytes)
+[2026-03-12 22:12:50] [info] Client connected.
+[2026-03-12 22:12:52] [info] Raw HTTP request received:
+GET /dbtest HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 22:12:52] [info] Sent response (116 bytes)
+[2026-03-12 22:12:53] [info] Client connected.
+[2026-03-12 22:12:55] [info] Client disconnected.
+[2026-03-12 22:12:55] [warning] Empty request received.
+[2026-03-12 22:12:58] [info] Server shutting down due to console event
+[2026-03-12 22:12:58] [info] Stop signal received. Server loop will exit.
+[2026-03-12 22:12:58] [error] accept() failed with error: 10004
+[2026-03-12 22:12:58] [warning] Failed to accept client connection.
+[2026-03-12 22:12:58] [info] Server stopped.
+[2026-03-12 22:12:58] [info] Server shutting down...
+[2026-03-12 22:12:58] [info] Server socket closed.
+[2026-03-12 22:12:58] [info] Server object destroyed.
+[2026-03-12 22:13:21] [info] Server starting up...
+[2026-03-12 22:13:21] [info] DB Route Loaded: GET /dbhello
+[2026-03-12 22:13:21] [info] DB Route Loaded: GET /dbhello
+[2026-03-12 22:13:21] [info] DB Route Loaded: GET /dbhello
+[2026-03-12 22:13:21] [info] DB Route Loaded: GET /dbtest
+[2026-03-12 22:13:21] [info] DB Route Loaded: GET /dbhello
+[2026-03-12 22:13:21] [info] DB Route Loaded: GET /dbtest
+[2026-03-12 22:13:21] [info] Server object created on port 8080
+[2026-03-12 22:13:21] [info] Socket created successfully.
+[2026-03-12 22:13:21] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-12 22:13:21] [info] Socket bound successfully to port 8080
+[2026-03-12 22:13:21] [info] Server is now listening on port 8080
+[2026-03-12 22:13:21] [info] Server running on port 8080
+[2026-03-12 22:13:32] [info] Client connected.
+[2026-03-12 22:13:32] [info] Client connected.
+[2026-03-12 22:13:32] [info] Raw HTTP request received:
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 22:13:32] [info] Sent response (162 bytes)
+[2026-03-12 22:13:32] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 22:13:32] [info] Sent response (173 bytes)
+[2026-03-12 22:13:32] [info] Client connected.
+[2026-03-12 22:13:43] [info] Raw HTTP request received:
+GET /dbtest HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-12 22:13:43] [info] Sent response (115 bytes)
+[2026-03-12 22:13:43] [info] Client connected.
+[2026-03-12 22:13:49] [info] Server shutting down due to console event
+[2026-03-12 22:13:49] [info] Stop signal received. Server loop will exit.
+[2026-03-12 22:13:49] [error] accept() failed with error: 10004
+[2026-03-12 22:13:49] [warning] Failed to accept client connection.
+[2026-03-12 22:13:49] [info] Server stopped.
+[2026-03-12 22:13:55] [info] Client disconnected.
+[2026-03-12 22:13:55] [warning] Empty request received.
+[2026-03-12 22:13:55] [info] Server shutting down...
+[2026-03-12 22:13:55] [info] Server socket closed.
+[2026-03-12 22:13:55] [info] Server object destroyed.
+[2026-03-13 11:40:44] [info] Server starting up...
+[2026-03-13 11:40:44] [info] DB Route Loaded: /dbhello 200
+[2026-03-13 11:40:44] [info] DB Route Loaded: /dbtest 200
+[2026-03-13 11:40:44] [info] Server object created on port 8080
+[2026-03-13 11:40:44] [info] Socket created successfully.
+[2026-03-13 11:40:44] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 11:40:44] [info] Socket bound successfully to port 8080
+[2026-03-13 11:40:44] [info] Server is now listening on port 8080
+[2026-03-13 11:40:44] [info] Server running on port 8080
+[2026-03-13 11:41:09] [info] Client connected.
+[2026-03-13 11:41:09] [info] Client connected.
+[2026-03-13 11:41:09] [info] Raw HTTP request received:
+GET /dbtest HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 11:41:09] [info] Sent response (168 bytes)
+[2026-03-13 11:41:09] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbtest
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 11:41:09] [info] Sent response (173 bytes)
+[2026-03-13 11:41:10] [info] Client connected.
+[2026-03-13 11:41:47] [info] Raw HTTP request received:
+GET /dbhello HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 11:41:47] [info] Sent response (169 bytes)
+[2026-03-13 11:41:47] [info] Client connected.
+[2026-03-13 11:45:48] [info] Client disconnected.
+[2026-03-13 11:45:48] [warning] Empty request received.
+[2026-03-13 11:49:38] [info] Client connected.
+[2026-03-13 11:49:38] [info] Client connected.
+[2026-03-13 11:49:38] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 11:49:38] [info] Sent response (108 bytes)
+[2026-03-13 11:49:38] [info] Client connected.
+[2026-03-13 11:49:43] [info] Raw HTTP request received:
+GET /dbtest HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 11:49:43] [info] Sent response (168 bytes)
+[2026-03-13 11:50:55] [info] Client disconnected.
+[2026-03-13 11:50:55] [warning] Empty request received.
+[2026-03-13 11:55:35] [info] Server shutting down due to console event
+[2026-03-13 11:55:35] [info] Stop signal received. Server loop will exit.
+[2026-03-13 11:55:35] [error] accept() failed with error: 10004
+[2026-03-13 11:55:35] [warning] Failed to accept client connection.
+[2026-03-13 11:55:35] [info] Server stopped.
+[2026-03-13 11:55:35] [info] Server shutting down...
+[2026-03-13 11:55:35] [info] Server socket closed.
+[2026-03-13 11:55:35] [info] Server object destroyed.
+[2026-03-13 11:56:05] [info] Server starting up...
+[2026-03-13 11:56:45] [info] Server starting up...
+[2026-03-13 12:01:22] [info] Server starting up...
+[2026-03-13 12:01:22] [info] DB Route Loaded: GET /dbhello
+[2026-03-13 12:01:22] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 12:01:22] [info] Server object created on port 8080
+[2026-03-13 12:01:22] [info] Socket created successfully.
+[2026-03-13 12:01:22] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 12:01:22] [info] Socket bound successfully to port 8080
+[2026-03-13 12:01:22] [info] Server is now listening on port 8080
+[2026-03-13 12:01:22] [info] Server running on port 8080
+[2026-03-13 12:01:42] [info] Client connected.
+[2026-03-13 12:01:42] [info] Client connected.
+[2026-03-13 12:01:42] [info] Raw HTTP request received:
+GET /dbtest HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 12:01:42] [info] Sent response (115 bytes)
+[2026-03-13 12:01:42] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbtest
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 12:01:42] [info] Sent response (173 bytes)
+[2026-03-13 12:01:43] [info] Client connected.
+[2026-03-13 12:01:50] [info] Raw HTTP request received:
+GET /dbhello HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 12:01:50] [info] Sent response (107 bytes)
+[2026-03-13 12:01:51] [info] Client connected.
+[2026-03-13 12:01:55] [info] Server shutting down due to console event
+[2026-03-13 12:01:55] [info] Stop signal received. Server loop will exit.
+[2026-03-13 12:01:55] [error] accept() failed with error: 10004
+[2026-03-13 12:01:55] [warning] Failed to accept client connection.
+[2026-03-13 12:01:55] [info] Server stopped.
+[2026-03-13 12:01:59] [info] Raw HTTP request received:
+GET /dbhello HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 12:01:59] [info] Sent response (107 bytes)
+[2026-03-13 12:01:59] [info] Server shutting down...
+[2026-03-13 12:01:59] [info] Server socket closed.
+[2026-03-13 12:01:59] [info] Server object destroyed.
+[2026-03-13 12:30:58] [info] Server starting up...
+[2026-03-13 12:30:58] [info] DB Route Loaded: GET /dbhello
+[2026-03-13 12:30:58] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 12:30:58] [info] Server object created on port 8080
+[2026-03-13 12:30:58] [info] Socket created successfully.
+[2026-03-13 12:30:58] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 12:30:58] [info] Socket bound successfully to port 8080
+[2026-03-13 12:30:58] [info] Server is now listening on port 8080
+[2026-03-13 12:30:58] [info] Server running on port 8080
+[2026-03-13 12:31:03] [info] Server shutting down due to console event
+[2026-03-13 12:31:03] [info] Stop signal received. Server loop will exit.
+[2026-03-13 12:31:03] [error] accept() failed with error: 10004
+[2026-03-13 12:31:03] [warning] Failed to accept client connection.
+[2026-03-13 12:31:03] [info] Server stopped.
+[2026-03-13 12:31:03] [info] Server shutting down...
+[2026-03-13 12:31:03] [info] Server socket closed.
+[2026-03-13 12:31:03] [info] Server object destroyed.
+[2026-03-13 12:31:48] [info] Server starting up...
+[2026-03-13 12:31:48] [info] DB Route Loaded: GET /dbhello
+[2026-03-13 12:31:48] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 12:31:48] [info] Server object created on port 8080
+[2026-03-13 12:31:48] [info] Socket created successfully.
+[2026-03-13 12:31:48] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 12:31:48] [info] Socket bound successfully to port 8080
+[2026-03-13 12:31:48] [info] Server is now listening on port 8080
+[2026-03-13 12:31:48] [info] Server running on port 8080
+[2026-03-13 12:58:12] [info] Server shutting down due to console event
+[2026-03-13 12:58:12] [info] Stop signal received. Server loop will exit.
+[2026-03-13 12:58:12] [error] accept() failed with error: 10004
+[2026-03-13 12:58:12] [warning] Failed to accept client connection.
+[2026-03-13 12:58:12] [info] Server stopped.
+[2026-03-13 12:58:12] [info] Server shutting down...
+[2026-03-13 12:58:12] [info] Server socket closed.
+[2026-03-13 12:58:12] [info] Server object destroyed.
+[2026-03-13 12:58:28] [info] Server starting up...
+[2026-03-13 12:58:28] [info] DB Route Loaded: GET /dbhello
+[2026-03-13 12:58:28] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 12:58:28] [info] Server object created on port 8080
+[2026-03-13 12:58:28] [info] Socket created successfully.
+[2026-03-13 12:58:28] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 12:58:28] [info] Socket bound successfully to port 8080
+[2026-03-13 12:58:28] [info] Server is now listening on port 8080
+[2026-03-13 12:58:28] [info] Server running on port 8080
+[2026-03-13 12:58:39] [info] Client connected.
+[2026-03-13 12:58:39] [info] Client connected.
+[2026-03-13 12:58:39] [info] Raw HTTP request received:
+GET /dbtest HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 12:58:39] [info] Sent response (115 bytes)
+[2026-03-13 12:58:39] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbtest
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 12:58:39] [info] Sent response (173 bytes)
+[2026-03-13 12:58:39] [info] Client connected.
+[2026-03-13 12:58:45] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 12:58:45] [info] Sent response (108 bytes)
+[2026-03-13 12:58:45] [info] Client connected.
+[2026-03-13 12:58:53] [info] Raw HTTP request received:
+GET /index.html HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 12:58:53] [info] Sent response (399 bytes)
+[2026-03-13 12:58:54] [info] Client connected.
+[2026-03-13 12:58:54] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/index.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 12:58:54] [info] Sent response (200 bytes)
+[2026-03-13 12:58:54] [info] Client connected.
+[2026-03-13 12:58:54] [info] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/index.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 12:58:54] [info] Sent response (7147 bytes)
+[2026-03-13 12:59:39] [info] Server shutting down due to console event
+[2026-03-13 12:59:39] [info] Stop signal received. Server loop will exit.
+[2026-03-13 12:59:39] [error] accept() failed with error: 10004
+[2026-03-13 12:59:39] [warning] Failed to accept client connection.
+[2026-03-13 12:59:39] [info] Server stopped.
+[2026-03-13 12:59:39] [info] Server shutting down...
+[2026-03-13 12:59:39] [info] Server socket closed.
+[2026-03-13 12:59:39] [info] Server object destroyed.
+[2026-03-13 15:03:56] [info] Server starting up...
+[2026-03-13 15:03:56] [info] DB Route Loaded: GET /dbhello
+[2026-03-13 15:03:56] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 15:03:56] [info] Server object created on port 8080
+[2026-03-13 15:03:56] [info] Socket created successfully.
+[2026-03-13 15:03:56] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 15:03:56] [info] Socket bound successfully to port 8080
+[2026-03-13 15:03:56] [info] Server is now listening on port 8080
+[2026-03-13 15:03:56] [info] Server running on port 8080
+[2026-03-13 15:04:24] [info] Server shutting down due to console event
+[2026-03-13 15:04:24] [info] Stop signal received. Server loop will exit.
+[2026-03-13 15:04:24] [error] accept() failed with error: 10004
+[2026-03-13 15:04:24] [warning] Failed to accept client connection.
+[2026-03-13 15:04:24] [info] Server stopped.
+[2026-03-13 15:04:24] [info] Server shutting down...
+[2026-03-13 15:04:24] [info] Server socket closed.
+[2026-03-13 15:04:24] [info] Server object destroyed.
+[2026-03-13 15:50:21] [info] Server starting up...
+[2026-03-13 15:50:21] [info] DB Route Loaded: GET /dbhello
+[2026-03-13 15:50:21] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 15:50:21] [info] DB Route Loaded: GET /banner
+[2026-03-13 15:50:21] [info] DB Route Loaded: GET /logo
+[2026-03-13 15:50:21] [info] Server object created on port 8080
+[2026-03-13 15:50:21] [info] Socket created successfully.
+[2026-03-13 15:50:21] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 15:50:21] [info] Socket bound successfully to port 8080
+[2026-03-13 15:50:21] [info] Server is now listening on port 8080
+[2026-03-13 15:50:21] [info] Server running on port 8080
+[2026-03-13 15:50:38] [info] Client connected.
+[2026-03-13 15:50:38] [info] Client connected.
+[2026-03-13 15:50:38] [info] Raw HTTP request received:
+GET /banner HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 15:50:38] [info] Sent response (89 bytes)
+[2026-03-13 15:50:38] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/banner
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 15:50:38] [info] Sent response (173 bytes)
+[2026-03-13 15:50:38] [info] Client connected.
+[2026-03-13 15:51:36] [info] Client disconnected.
+[2026-03-13 15:51:36] [warning] Empty request received.
+[2026-03-13 15:51:55] [info] Server shutting down due to console event
+[2026-03-13 15:51:55] [info] Stop signal received. Server loop will exit.
+[2026-03-13 15:51:55] [error] accept() failed with error: 10004
+[2026-03-13 15:51:55] [warning] Failed to accept client connection.
+[2026-03-13 15:51:55] [info] Server stopped.
+[2026-03-13 15:51:55] [info] Server shutting down...
+[2026-03-13 15:51:55] [info] Server socket closed.
+[2026-03-13 15:51:55] [info] Server object destroyed.
+[2026-03-13 15:52:10] [info] Server starting up...
+[2026-03-13 15:52:10] [info] DB Route Loaded: GET /dbhello
+[2026-03-13 15:52:10] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 15:52:10] [info] DB Route Loaded: GET /banner
+[2026-03-13 15:52:10] [info] DB Route Loaded: GET /logo
+[2026-03-13 15:52:10] [info] Server object created on port 8080
+[2026-03-13 15:52:10] [info] Socket created successfully.
+[2026-03-13 15:52:10] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 15:52:10] [info] Socket bound successfully to port 8080
+[2026-03-13 15:52:10] [info] Server is now listening on port 8080
+[2026-03-13 15:52:10] [info] Server running on port 8080
+[2026-03-13 15:52:26] [info] Client connected.
+[2026-03-13 15:52:26] [info] Client connected.
+[2026-03-13 15:52:26] [info] Raw HTTP request received:
+GET /dbhello HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 15:52:26] [info] Sent response (107 bytes)
+[2026-03-13 15:52:26] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 15:52:26] [info] Sent response (173 bytes)
+[2026-03-13 15:52:26] [info] Client connected.
+[2026-03-13 15:52:47] [info] Client disconnected.
+[2026-03-13 15:52:47] [warning] Empty request received.
+[2026-03-13 15:52:52] [info] Server shutting down due to console event
+[2026-03-13 15:52:52] [info] Stop signal received. Server loop will exit.
+[2026-03-13 15:52:52] [error] accept() failed with error: 10004
+[2026-03-13 15:52:52] [warning] Failed to accept client connection.
+[2026-03-13 15:52:52] [info] Server stopped.
+[2026-03-13 15:52:52] [info] Server shutting down...
+[2026-03-13 15:52:52] [info] Server socket closed.
+[2026-03-13 15:52:52] [info] Server object destroyed.
+[2026-03-13 15:53:13] [info] Server starting up...
+[2026-03-13 15:53:13] [info] DB Route Loaded: GET /dbhello
+[2026-03-13 15:53:13] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 15:53:13] [info] DB Route Loaded: GET /banner
+[2026-03-13 15:53:13] [info] DB Route Loaded: GET /logo
+[2026-03-13 15:53:13] [info] Server object created on port 8080
+[2026-03-13 15:53:13] [info] Socket created successfully.
+[2026-03-13 15:53:13] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 15:53:13] [info] Socket bound successfully to port 8080
+[2026-03-13 15:53:13] [info] Server is now listening on port 8080
+[2026-03-13 15:53:13] [info] Server running on port 8080
+[2026-03-13 15:53:21] [info] Server shutting down due to console event
+[2026-03-13 15:53:21] [info] Stop signal received. Server loop will exit.
+[2026-03-13 15:53:21] [error] accept() failed with error: 10004
+[2026-03-13 15:53:21] [warning] Failed to accept client connection.
+[2026-03-13 15:53:21] [info] Server stopped.
+[2026-03-13 15:53:21] [info] Server shutting down...
+[2026-03-13 15:53:21] [info] Server socket closed.
+[2026-03-13 15:53:21] [info] Server object destroyed.
+[2026-03-13 15:53:35] [info] Server starting up...
+[2026-03-13 15:53:35] [info] DB Route Loaded: GET /dbhello
+[2026-03-13 15:53:35] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 15:53:35] [info] DB Route Loaded: GET /banner
+[2026-03-13 15:53:35] [info] DB Route Loaded: GET /logo
+[2026-03-13 15:53:35] [info] Server object created on port 8080
+[2026-03-13 15:53:35] [info] Socket created successfully.
+[2026-03-13 15:53:35] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 15:53:35] [info] Socket bound successfully to port 8080
+[2026-03-13 15:53:35] [info] Server is now listening on port 8080
+[2026-03-13 15:53:35] [info] Server running on port 8080
+[2026-03-13 15:53:57] [info] Client connected.
+[2026-03-13 15:53:57] [info] Client connected.
+[2026-03-13 15:53:57] [info] Raw HTTP request received:
+GET /dbtest HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 15:53:57] [info] Sent response (115 bytes)
+[2026-03-13 15:53:57] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbtest
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 15:53:57] [info] Sent response (173 bytes)
+[2026-03-13 15:53:57] [info] Client connected.
+[2026-03-13 15:54:06] [info] Raw HTTP request received:
+GET /dbhello HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 15:54:06] [info] Sent response (89 bytes)
+[2026-03-13 15:54:06] [info] Client connected.
+[2026-03-13 15:57:17] [info] Client disconnected.
+[2026-03-13 15:57:17] [warning] Empty request received.
+[2026-03-13 15:57:18] [info] Client connected.
+[2026-03-13 15:57:18] [info] Client connected.
+[2026-03-13 15:57:18] [info] Raw HTTP request received:
+GET /banner HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 15:57:18] [info] Sent response (89 bytes)
+[2026-03-13 15:57:18] [info] Client connected.
+[2026-03-13 15:57:20] [info] Raw HTTP request received:
+GET /banner HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 15:57:20] [info] Sent response (89 bytes)
+[2026-03-13 15:57:23] [info] Client disconnected.
+[2026-03-13 15:57:23] [warning] Empty request received.
+[2026-03-13 15:57:30] [info] Server shutting down due to console event
+[2026-03-13 15:57:30] [info] Stop signal received. Server loop will exit.
+[2026-03-13 15:57:30] [error] accept() failed with error: 10004
+[2026-03-13 15:57:30] [warning] Failed to accept client connection.
+[2026-03-13 15:57:30] [info] Server stopped.
+[2026-03-13 15:57:30] [info] Server shutting down...
+[2026-03-13 15:57:30] [info] Server socket closed.
+[2026-03-13 15:57:30] [info] Server object destroyed.
+[2026-03-13 15:57:44] [info] Server starting up...
+[2026-03-13 15:57:44] [info] DB Route Loaded: GET /dbhello
+[2026-03-13 15:57:44] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 15:57:44] [info] DB Route Loaded: GET /banner
+[2026-03-13 15:57:44] [info] DB Route Loaded: GET /logo
+[2026-03-13 15:57:44] [info] Server object created on port 8080
+[2026-03-13 15:57:44] [info] Socket created successfully.
+[2026-03-13 15:57:44] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 15:57:44] [info] Socket bound successfully to port 8080
+[2026-03-13 15:57:44] [info] Server is now listening on port 8080
+[2026-03-13 15:57:44] [info] Server running on port 8080
+[2026-03-13 15:57:56] [info] Client connected.
+[2026-03-13 15:57:56] [info] Client connected.
+[2026-03-13 15:57:56] [info] Raw HTTP request received:
+GET /dbhello HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 15:57:56] [info] Sent response (89 bytes)
+[2026-03-13 15:57:56] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 15:57:56] [info] Sent response (173 bytes)
+[2026-03-13 15:57:56] [info] Client connected.
+[2026-03-13 15:59:13] [info] Client disconnected.
+[2026-03-13 15:59:13] [warning] Empty request received.
+[2026-03-13 15:59:23] [info] Client connected.
+[2026-03-13 15:59:23] [info] Client connected.
+[2026-03-13 15:59:23] [info] Raw HTTP request received:
+GET /index.html HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 15:59:23] [info] Sent response (399 bytes)
+[2026-03-13 15:59:23] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/index.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 15:59:23] [info] Sent response (200 bytes)
+[2026-03-13 15:59:23] [info] Client connected.
+[2026-03-13 15:59:23] [info] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/index.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 15:59:24] [info] Sent response (7147 bytes)
+[2026-03-13 16:06:28] [info] Server shutting down due to console event
+[2026-03-13 16:06:28] [info] Stop signal received. Server loop will exit.
+[2026-03-13 16:06:28] [error] accept() failed with error: 10004
+[2026-03-13 16:06:28] [warning] Failed to accept client connection.
+[2026-03-13 16:06:28] [info] Server stopped.
+[2026-03-13 16:06:28] [info] Server shutting down...
+[2026-03-13 16:06:28] [info] Server socket closed.
+[2026-03-13 16:06:28] [info] Server object destroyed.
+[2026-03-13 16:06:40] [info] Server starting up...
+[2026-03-13 16:06:40] [info] DB Route Loaded: GET /dbhello
+[2026-03-13 16:06:40] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 16:06:40] [info] DB Route Loaded: GET /banner
+[2026-03-13 16:06:40] [info] DB Route Loaded: GET /logo
+[2026-03-13 16:06:40] [info] Server object created on port 8080
+[2026-03-13 16:06:40] [info] Socket created successfully.
+[2026-03-13 16:06:40] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 16:06:40] [info] Socket bound successfully to port 8080
+[2026-03-13 16:06:40] [info] Server is now listening on port 8080
+[2026-03-13 16:06:40] [info] Server running on port 8080
+[2026-03-13 16:06:55] [info] Client connected.
+[2026-03-13 16:06:55] [info] Client connected.
+[2026-03-13 16:06:55] [info] Raw HTTP request received:
+GET /banner HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 16:06:55] [info] Sent response (89 bytes)
+[2026-03-13 16:06:55] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/banner
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 16:06:55] [info] Sent response (173 bytes)
+[2026-03-13 16:06:55] [info] Client connected.
+[2026-03-13 16:07:16] [info] Client disconnected.
+[2026-03-13 16:07:16] [warning] Empty request received.
+[2026-03-13 16:16:11] [info] Server shutting down due to console event
+[2026-03-13 16:16:11] [info] Stop signal received. Server loop will exit.
+[2026-03-13 16:16:11] [error] accept() failed with error: 10004
+[2026-03-13 16:16:11] [warning] Failed to accept client connection.
+[2026-03-13 16:16:11] [info] Server stopped.
+[2026-03-13 16:16:11] [info] Server shutting down...
+[2026-03-13 16:16:11] [info] Server socket closed.
+[2026-03-13 16:16:11] [info] Server object destroyed.
+[2026-03-13 16:16:35] [info] Server starting up...
+[2026-03-13 16:16:35] [info] DB Route Loaded: GET /dbhello
+[2026-03-13 16:16:35] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 16:16:35] [info] DB Route Loaded: GET /banner
+[2026-03-13 16:16:35] [info] DB Route Loaded: GET /logo
+[2026-03-13 16:16:35] [info] Server object created on port 8080
+[2026-03-13 16:16:35] [info] Socket created successfully.
+[2026-03-13 16:16:35] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 16:16:35] [info] Socket bound successfully to port 8080
+[2026-03-13 16:16:35] [info] Server is now listening on port 8080
+[2026-03-13 16:16:35] [info] Server running on port 8080
+[2026-03-13 16:17:14] [info] Client connected.
+[2026-03-13 16:17:14] [info] Client connected.
+[2026-03-13 16:17:14] [info] Raw HTTP request received:
+GET /banner HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 16:17:14] [info] Sent response (89 bytes)
+[2026-03-13 16:17:14] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/banner
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 16:17:14] [info] Sent response (173 bytes)
+[2026-03-13 16:17:14] [info] Client connected.
+[2026-03-13 16:19:55] [info] Server shutting down due to console event
+[2026-03-13 16:19:55] [info] Stop signal received. Server loop will exit.
+[2026-03-13 16:19:55] [error] accept() failed with error: 10004
+[2026-03-13 16:19:55] [warning] Failed to accept client connection.
+[2026-03-13 16:19:55] [info] Server stopped.
+[2026-03-13 16:19:59] [info] Client disconnected.
+[2026-03-13 16:19:59] [warning] Empty request received.
+[2026-03-13 16:19:59] [info] Server shutting down...
+[2026-03-13 16:19:59] [info] Server socket closed.
+[2026-03-13 16:19:59] [info] Server object destroyed.
+[2026-03-13 16:22:53] [info] Server starting up...
+[2026-03-13 16:22:53] [info] Static Route Loaded: GET /dbhello
+[2026-03-13 16:22:53] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 16:22:53] [info] Static Route Loaded: GET /banner
+[2026-03-13 16:22:53] [info] Static Route Loaded: GET /logo
+[2026-03-13 16:22:53] [info] Server object created on port 8080
+[2026-03-13 16:22:53] [info] Socket created successfully.
+[2026-03-13 16:22:53] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 16:22:53] [info] Socket bound successfully to port 8080
+[2026-03-13 16:22:53] [info] Server is now listening on port 8080
+[2026-03-13 16:22:53] [info] Server running on port 8080
+[2026-03-13 16:23:07] [info] Client connected.
+[2026-03-13 16:23:07] [info] Client connected.
+[2026-03-13 16:23:07] [info] Raw HTTP request received:
+GET /dbhello HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 16:23:07] [info] Sent response (399 bytes)
+[2026-03-13 16:23:07] [info] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 16:23:07] [info] Sent response (7147 bytes)
+[2026-03-13 16:23:07] [info] Client connected.
+[2026-03-13 16:23:07] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 16:23:07] [info] Sent response (200 bytes)
+[2026-03-13 16:23:07] [info] Client connected.
+[2026-03-13 16:23:07] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 16:23:07] [info] Sent response (173 bytes)
+[2026-03-13 16:23:08] [info] Client connected.
+[2026-03-13 16:23:12] [info] Raw HTTP request received:
+GET /banner HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 16:23:12] [info] Sent response (399 bytes)
+[2026-03-13 16:23:12] [info] Client connected.
+[2026-03-13 16:23:12] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/banner
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 16:23:12] [info] Sent response (200 bytes)
+[2026-03-13 16:23:12] [info] Client connected.
+[2026-03-13 16:23:12] [info] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/banner
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 16:23:12] [info] Sent response (7147 bytes)
+[2026-03-13 16:26:51] [info] Server shutting down due to console event
+[2026-03-13 16:26:51] [info] Stop signal received. Server loop will exit.
+[2026-03-13 16:26:51] [error] accept() failed with error: 10004
+[2026-03-13 16:26:51] [warning] Failed to accept client connection.
+[2026-03-13 16:26:51] [info] Server stopped.
+[2026-03-13 16:26:51] [info] Server shutting down...
+[2026-03-13 16:26:51] [info] Server socket closed.
+[2026-03-13 16:26:51] [info] Server object destroyed.
+[2026-03-13 16:27:15] [info] Server starting up...
+[2026-03-13 16:27:15] [info] Static Route Loaded: GET /dbhello
+[2026-03-13 16:27:15] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 16:27:15] [info] Static Route Loaded: GET /banner
+[2026-03-13 16:27:15] [info] Static Route Loaded: GET /logo
+[2026-03-13 16:27:15] [info] Server object created on port 8080
+[2026-03-13 16:27:15] [info] Socket created successfully.
+[2026-03-13 16:27:15] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 16:27:15] [info] Socket bound successfully to port 8080
+[2026-03-13 16:27:15] [info] Server is now listening on port 8080
+[2026-03-13 16:27:15] [info] Server running on port 8080
+[2026-03-13 16:27:32] [info] Client connected.
+[2026-03-13 16:27:32] [info] Client connected.
+[2026-03-13 16:27:32] [info] Raw HTTP request received:
+GET /dbhello HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 16:27:32] [info] Sent response (399 bytes)
+[2026-03-13 16:27:32] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 16:27:32] [info] Sent response (200 bytes)
+[2026-03-13 16:27:32] [info] Client connected.
+[2026-03-13 16:27:32] [info] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 16:27:32] [info] Sent response (7147 bytes)
+[2026-03-13 16:27:32] [info] Client connected.
+[2026-03-13 16:27:32] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 16:27:32] [info] Sent response (173 bytes)
+[2026-03-13 16:27:33] [info] Client connected.
+[2026-03-13 16:28:15] [info] Client disconnected.
+[2026-03-13 16:28:15] [warning] Empty request received.
+[2026-03-13 16:28:18] [info] Server shutting down due to console event
+[2026-03-13 16:28:18] [info] Stop signal received. Server loop will exit.
+[2026-03-13 16:28:18] [error] accept() failed with error: 10004
+[2026-03-13 16:28:18] [warning] Failed to accept client connection.
+[2026-03-13 16:28:18] [info] Server stopped.
+[2026-03-13 16:28:18] [info] Server shutting down...
+[2026-03-13 16:28:18] [info] Server socket closed.
+[2026-03-13 16:28:18] [info] Server object destroyed.
+[2026-03-13 20:26:13] [info] Server starting up...
+[2026-03-13 20:26:13] [info] Static Route Loaded: GET /dbhello
+[2026-03-13 20:26:13] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 20:26:13] [info] Static Route Loaded: GET /banner
+[2026-03-13 20:26:13] [info] Static Route Loaded: GET /logo
+[2026-03-13 20:26:13] [info] Server object created on port 8080
+[2026-03-13 20:26:13] [info] Socket created successfully.
+[2026-03-13 20:26:13] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 20:26:13] [info] Socket bound successfully to port 8080
+[2026-03-13 20:26:13] [info] Server is now listening on port 8080
+[2026-03-13 20:26:13] [info] Server running on port 8080
+[2026-03-13 20:27:21] [info] Client connected.
+[2026-03-13 20:27:21] [info] Client connected.
+[2026-03-13 20:27:21] [info] Raw HTTP request received:
+GET /dbtest HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:27:21] [info] Sent response (115 bytes)
+[2026-03-13 20:27:21] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbtest
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:27:21] [info] Sent response (173 bytes)
+[2026-03-13 20:27:21] [info] Client connected.
+[2026-03-13 20:27:38] [info] Raw HTTP request received:
+GET /banner HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:27:38] [info] Sent response (399 bytes)
+[2026-03-13 20:27:39] [info] Client connected.
+[2026-03-13 20:27:39] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/banner
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:27:39] [info] Sent response (200 bytes)
+[2026-03-13 20:27:39] [info] Client connected.
+[2026-03-13 20:27:39] [info] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/banner
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:27:39] [info] Sent response (7147 bytes)
+[2026-03-13 20:28:00] [info] Client connected.
+[2026-03-13 20:28:00] [info] Client connected.
+[2026-03-13 20:28:00] [info] Raw HTTP request received:
+GET /namaskar HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:28:00] [info] Sent response (108 bytes)
+[2026-03-13 20:28:00] [info] Client connected.
+[2026-03-13 20:28:09] [info] Client disconnected.
+[2026-03-13 20:28:09] [warning] Empty request received.
+[2026-03-13 20:28:09] [info] Client disconnected.
+[2026-03-13 20:28:09] [warning] Empty request received.
+[2026-03-13 20:44:42] [info] Server shutting down due to console event
+[2026-03-13 20:44:42] [info] Stop signal received. Server loop will exit.
+[2026-03-13 20:44:42] [error] accept() failed with error: 10004
+[2026-03-13 20:44:42] [warning] Failed to accept client connection.
+[2026-03-13 20:44:42] [info] Server stopped.
+[2026-03-13 20:44:42] [info] Server shutting down...
+[2026-03-13 20:44:42] [info] Server socket closed.
+[2026-03-13 20:44:42] [info] Server object destroyed.
+[2026-03-13 20:44:55] [info] Server starting up...
+[2026-03-13 20:44:55] [info] Static Route Loaded: GET /dbhello
+[2026-03-13 20:44:55] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 20:44:55] [info] Static Route Loaded: GET /banner
+[2026-03-13 20:44:55] [info] Static Route Loaded: GET /logo
+[2026-03-13 20:44:55] [info] Server object created on port 8080
+[2026-03-13 20:44:55] [info] Socket created successfully.
+[2026-03-13 20:44:55] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 20:44:55] [info] Socket bound successfully to port 8080
+[2026-03-13 20:44:55] [info] Server is now listening on port 8080
+[2026-03-13 20:44:55] [info] Server running on port 8080
+[2026-03-13 20:45:08] [info] Client connected.
+[2026-03-13 20:45:08] [info] Client connected.
+[2026-03-13 20:45:08] [info] Raw HTTP request received:
+GET /dbtest HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:45:08] [info] Sent response (115 bytes)
+[2026-03-13 20:45:08] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbtest
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:45:08] [info] Sent response (173 bytes)
+[2026-03-13 20:45:08] [info] Client connected.
+[2026-03-13 20:45:40] [info] Client disconnected.
+[2026-03-13 20:45:40] [warning] Empty request received.
+[2026-03-13 20:45:43] [info] Server shutting down due to console event
+[2026-03-13 20:45:43] [info] Stop signal received. Server loop will exit.
+[2026-03-13 20:45:43] [error] accept() failed with error: 10004
+[2026-03-13 20:45:43] [warning] Failed to accept client connection.
+[2026-03-13 20:45:43] [info] Server stopped.
+[2026-03-13 20:45:43] [info] Server shutting down...
+[2026-03-13 20:45:43] [info] Server socket closed.
+[2026-03-13 20:45:43] [info] Server object destroyed.
+[2026-03-13 20:46:01] [info] Server starting up...
+[2026-03-13 20:46:01] [info] Static Route Loaded: GET /dbhello
+[2026-03-13 20:46:01] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 20:46:01] [info] Static Route Loaded: GET /banner
+[2026-03-13 20:46:01] [info] Static Route Loaded: GET /logo
+[2026-03-13 20:46:01] [info] Server object created on port 8080
+[2026-03-13 20:46:01] [info] Socket created successfully.
+[2026-03-13 20:46:01] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 20:46:01] [info] Socket bound successfully to port 8080
+[2026-03-13 20:46:01] [info] Server is now listening on port 8080
+[2026-03-13 20:46:01] [info] Server running on port 8080
+[2026-03-13 20:46:15] [info] Client connected.
+[2026-03-13 20:46:15] [info] Client connected.
+[2026-03-13 20:46:15] [info] Raw HTTP request received:
+GET /dbtest HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:46:15] [info] Sent response (115 bytes)
+[2026-03-13 20:46:15] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbtest
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:46:15] [info] Sent response (173 bytes)
+[2026-03-13 20:46:15] [info] Client connected.
+[2026-03-13 20:46:31] [info] Raw HTTP request received:
+GET /banner HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:46:31] [info] Sent response (399 bytes)
+[2026-03-13 20:46:31] [info] Client connected.
+[2026-03-13 20:46:31] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/banner
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:46:31] [info] Sent response (200 bytes)
+[2026-03-13 20:46:31] [info] Client connected.
+[2026-03-13 20:46:31] [info] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/banner
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:46:31] [info] Sent response (7147 bytes)
+[2026-03-13 20:47:05] [info] Server shutting down due to console event
+[2026-03-13 20:47:05] [info] Stop signal received. Server loop will exit.
+[2026-03-13 20:47:05] [error] accept() failed with error: 10004
+[2026-03-13 20:47:05] [warning] Failed to accept client connection.
+[2026-03-13 20:47:05] [info] Server stopped.
+[2026-03-13 20:47:05] [info] Server shutting down...
+[2026-03-13 20:47:05] [info] Server socket closed.
+[2026-03-13 20:47:05] [info] Server object destroyed.
+[2026-03-13 20:58:30] [info] Server starting up...
+[2026-03-13 20:58:30] [info] Static Route Loaded: GET /dbhello
+[2026-03-13 20:58:30] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 20:58:30] [info] Static Route Loaded: GET /banner
+[2026-03-13 20:58:30] [info] Static Route Loaded: GET /logo
+[2026-03-13 20:58:30] [info] Server object created on port 8080
+[2026-03-13 20:58:30] [info] Socket created successfully.
+[2026-03-13 20:58:30] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 20:58:30] [info] Socket bound successfully to port 8080
+[2026-03-13 20:58:30] [info] Server is now listening on port 8080
+[2026-03-13 20:58:30] [info] Server running on port 8080
+[2026-03-13 20:58:38] [info] Client connected.
+[2026-03-13 20:58:38] [info] Client connected.
+[2026-03-13 20:58:38] [info] Raw HTTP request received:
+GET /banner HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:58:38] [info] Sent response (399 bytes)
+[2026-03-13 20:58:38] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/banner
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:58:38] [info] Sent response (200 bytes)
+[2026-03-13 20:58:38] [info] Client connected.
+[2026-03-13 20:58:38] [info] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/banner
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:58:38] [info] Sent response (7147 bytes)
+[2026-03-13 20:58:38] [info] Client connected.
+[2026-03-13 20:58:38] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/banner
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:58:38] [info] Sent response (173 bytes)
+[2026-03-13 20:58:39] [info] Client connected.
+[2026-03-13 20:58:40] [info] Client disconnected.
+[2026-03-13 20:58:40] [warning] Empty request received.
+[2026-03-13 20:58:51] [info] Client connected.
+[2026-03-13 20:58:51] [info] Client connected.
+[2026-03-13 20:58:51] [info] Raw HTTP request received:
+GET /logo HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:58:51] [info] Sent response (399 bytes)
+[2026-03-13 20:58:51] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/logo
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:58:51] [info] Sent response (200 bytes)
+[2026-03-13 20:58:52] [info] Client connected.
+[2026-03-13 20:58:52] [info] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/logo
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 20:58:52] [info] Sent response (7147 bytes)
+[2026-03-13 21:47:14] [info] Server shutting down due to console event
+[2026-03-13 21:47:14] [info] Stop signal received. Server loop will exit.
+[2026-03-13 21:47:14] [error] accept() failed with error: 10004
+[2026-03-13 21:47:14] [warning] Failed to accept client connection.
+[2026-03-13 21:47:14] [info] Server stopped.
+[2026-03-13 21:47:14] [info] Server shutting down...
+[2026-03-13 21:47:14] [info] Server socket closed.
+[2026-03-13 21:47:14] [info] Server object destroyed.
+[2026-03-13 21:47:35] [info] Server starting up...
+[2026-03-13 21:47:35] [info] Static Route Loaded: GET /dbhello
+[2026-03-13 21:47:35] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 21:47:35] [info] Static Route Loaded: GET /banner
+[2026-03-13 21:47:35] [info] Static Route Loaded: GET /logo
+[2026-03-13 21:47:35] [info] Server object created on port 8080
+[2026-03-13 21:47:35] [info] Socket created successfully.
+[2026-03-13 21:47:35] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 21:47:35] [info] Socket bound successfully to port 8080
+[2026-03-13 21:47:35] [info] Server is now listening on port 8080
+[2026-03-13 21:47:35] [info] Server running on port 8080
+[2026-03-13 21:47:38] [info] Client connected.
+[2026-03-13 21:47:38] [info] Client connected.
+[2026-03-13 21:47:38] [info] Raw HTTP request received:
+GET /logo HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 21:47:38] [info] Sent response (399 bytes)
+[2026-03-13 21:47:38] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/logo
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 21:47:38] [info] Sent response (200 bytes)
+[2026-03-13 21:47:39] [info] Client connected.
+[2026-03-13 21:47:39] [info] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/logo
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 21:47:39] [info] Sent response (7147 bytes)
+[2026-03-13 21:47:47] [info] Client connected.
+[2026-03-13 21:47:47] [info] Client connected.
+[2026-03-13 21:47:47] [info] Raw HTTP request received:
+GET /logo HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 21:47:47] [info] Sent response (399 bytes)
+[2026-03-13 21:47:47] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/logo
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 21:47:47] [info] Sent response (200 bytes)
+[2026-03-13 21:47:47] [info] Client connected.
+[2026-03-13 21:47:47] [info] Raw HTTP request received:
+GET /logo HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 21:47:47] [info] Sent response (399 bytes)
+[2026-03-13 21:47:47] [info] Client connected.
+[2026-03-13 21:47:47] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/logo
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 21:47:47] [info] Sent response (200 bytes)
+[2026-03-13 21:47:47] [info] Client connected.
+[2026-03-13 21:47:47] [info] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/logo
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 21:47:47] [info] Sent response (7147 bytes)
+[2026-03-13 21:47:59] [info] Server shutting down due to console event
+[2026-03-13 21:47:59] [info] Stop signal received. Server loop will exit.
+[2026-03-13 21:47:59] [error] accept() failed with error: 10004
+[2026-03-13 21:47:59] [warning] Failed to accept client connection.
+[2026-03-13 21:47:59] [info] Server stopped.
+[2026-03-13 21:47:59] [info] Server shutting down...
+[2026-03-13 21:47:59] [info] Server socket closed.
+[2026-03-13 21:47:59] [info] Server object destroyed.
+[2026-03-13 21:59:55] [info] Server starting up...
+[2026-03-13 21:59:55] [info] Static Route Loaded: GET /dbhello
+[2026-03-13 21:59:55] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 21:59:55] [info] Static Route Loaded: GET /banner
+[2026-03-13 21:59:55] [info] Static Route Loaded: GET /logo
+[2026-03-13 21:59:55] [info] Server object created on port 8080
+[2026-03-13 21:59:55] [info] Socket created successfully.
+[2026-03-13 21:59:55] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 21:59:55] [info] Socket bound successfully to port 8080
+[2026-03-13 21:59:55] [info] Server is now listening on port 8080
+[2026-03-13 21:59:55] [info] Server running on port 8080
+[2026-03-13 22:00:25] [info] Client connected.
+[2026-03-13 22:00:25] [info] Client connected.
+[2026-03-13 22:00:25] [info] Raw HTTP request received:
+GET /dbhello HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 22:00:25] [info] Sent response (399 bytes)
+[2026-03-13 22:00:25] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 22:00:25] [info] Sent response (200 bytes)
+[2026-03-13 22:00:25] [info] Client connected.
+[2026-03-13 22:00:25] [info] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 22:00:25] [info] Sent response (7147 bytes)
+[2026-03-13 22:00:25] [info] Client connected.
+[2026-03-13 22:00:25] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 22:00:25] [info] Sent response (173 bytes)
+[2026-03-13 22:00:25] [info] Client connected.
+[2026-03-13 22:05:04] [info] Client disconnected.
+[2026-03-13 22:05:04] [warning] Empty request received.
+[2026-03-13 22:05:11] [info] Server shutting down due to console event
+[2026-03-13 22:05:11] [info] Stop signal received. Server loop will exit.
+[2026-03-13 22:05:11] [error] accept() failed with error: 10004
+[2026-03-13 22:05:11] [warning] Failed to accept client connection.
+[2026-03-13 22:05:11] [info] Server stopped.
+[2026-03-13 22:05:11] [info] Server shutting down...
+[2026-03-13 22:05:11] [info] Server socket closed.
+[2026-03-13 22:05:11] [info] Server object destroyed.
+[2026-03-13 22:16:24] [info] Server starting up...
+[2026-03-13 22:16:24] [info] Static Route Loaded: GET /dbhello
+[2026-03-13 22:16:24] [info] DB Route Loaded: GET /dbtest
+[2026-03-13 22:16:24] [info] Static Route Loaded: GET /banner
+[2026-03-13 22:16:24] [info] Static Route Loaded: GET /logo
+[2026-03-13 22:16:24] [info] Server object created on port 8080
+[2026-03-13 22:16:24] [info] Socket created successfully.
+[2026-03-13 22:16:24] [info] Socket options set successfully (SO_REUSEADDR).
+[2026-03-13 22:16:24] [info] Socket bound successfully to port 8080
+[2026-03-13 22:16:24] [info] Server is now listening on port 8080
+[2026-03-13 22:16:24] [info] Server running on port 8080
+[2026-03-13 22:16:35] [info] Client connected.
+[2026-03-13 22:16:35] [info] Raw HTTP request received:
+GET /dbhello HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 22:16:35] [info] Sent response (399 bytes)
+[2026-03-13 22:16:35] [info] Client connected.
+[2026-03-13 22:16:35] [info] Client connected.
+[2026-03-13 22:16:35] [info] Raw HTTP request received:
+GET /css/style.css HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 22:16:35] [info] Raw HTTP request received:
+GET /images/logo.png HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 22:16:35] [info] Sent response (200 bytes)
+[2026-03-13 22:16:35] [info] Sent response (7147 bytes)
+[2026-03-13 22:16:35] [info] Client connected.
+[2026-03-13 22:16:35] [info] Raw HTTP request received:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+sec-ch-ua: "Not:A-Brand";v="99", "Microsoft Edge";v="145", "Chromium";v="145"
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Referer: http://localhost:8080/dbhello
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en,en-GB;q=0.9,en-US;q=0.8,en-IN;q=0.7
+
+
+[2026-03-13 22:16:35] [info] Sent response (173 bytes)
+[2026-03-13 22:16:35] [info] Client connected.
+[2026-03-13 22:16:37] [info] Client disconnected.
+[2026-03-13 22:16:37] [warning] Empty request received.
+[2026-03-13 22:16:40] [info] Server shutting down due to console event
+[2026-03-13 22:16:40] [info] Stop signal received. Server loop will exit.
+[2026-03-13 22:16:40] [error] accept() failed with error: 10004
+[2026-03-13 22:16:40] [warning] Failed to accept client connection.
+[2026-03-13 22:16:40] [info] Server stopped.
+[2026-03-13 22:16:40] [info] Server shutting down...
+[2026-03-13 22:16:40] [info] Server socket closed.
+[2026-03-13 22:16:40] [info] Server object destroyed.

@@ -1,5 +1,11 @@
 #output build folder
 out/
+build/
+
+CMakeCache.txt
+CMakeFiles/
+*.exe
+*.obj
 
 #rough files
 Notes.txt

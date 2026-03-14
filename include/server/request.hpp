@@ -23,6 +23,8 @@ public:
     const std::string& GetPath()const;
     const std::string& GetMethod()const;
     const std::string& GetBody()const;
+
+    std::string GetHeader(const std::string& key) const;
 };
 
 #endif // REQUEST_HPP

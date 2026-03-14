@@ -40,3 +40,12 @@ std::string HttpResponse::ToString() const
 
     return rResponseStream.str();
 }
+
+std::string HttpResponse::GetHeader(const std::string& key) const
+{
+    auto it = mHeaders.find(key);
+    if(it != mHeaders.end())
+        return it->second;
+
+    return "";
+}
