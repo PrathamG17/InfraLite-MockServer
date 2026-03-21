@@ -64,21 +64,15 @@ jobs:
     - name: Wait for server health
       shell: powershell
       run: |
-        $maxRetries = 15
+        $maxRetries = 5
         for ($i=0; $i -lt $maxRetries; $i++) {
           try {
-            Invoke-WebRequest https://localhost:8080/hello -SkipCertificateCheck
-            Write-Host "Server is up via HTTPS!"
+            Invoke-WebRequest http://localhost:8080/hello
+            Write-Host "Server is up!"
             exit 0
           } catch {
-            try {
-              Invoke-WebRequest http://localhost:8080/hello
-              Write-Host "Server is up via HTTP!"
-              exit 0
-            } catch {
-              Write-Host "Server not ready, retrying..."
-              Start-Sleep -Seconds 2
-            }
+            Write-Host "Server not ready, retrying..."
+            Start-Sleep -Seconds 2
           }
         }
         Write-Error "Server did not start in time"
