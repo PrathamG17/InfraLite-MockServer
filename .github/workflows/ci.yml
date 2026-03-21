@@ -59,9 +59,9 @@ jobs:
       run: |
         Write-Host "Checking if port 8080 is bound..."
         netstat -ano | findstr :8080
-        Write-Host "Trying one-off request to /hello..."
+        Write-Host "Trying one-off request to /hello (IPv4)..."
         try {
-          Invoke-WebRequest http://localhost:8080/hello -UseBasicParsing -TimeoutSec 5
+          Invoke-WebRequest http://127.0.0.1:8080/hello -UseBasicParsing -TimeoutSec 5
         } catch {
           Write-Warning "Initial /hello request failed: $($_.Exception.Message)"
         }
@@ -76,7 +76,7 @@ jobs:
         for ($i=1; $i -le $maxRetries; $i++) {
           Write-Host "Health check attempt $i of $maxRetries..."
           try {
-            $response = Invoke-WebRequest -Uri http://localhost:8080/hello -UseBasicParsing -TimeoutSec 5
+            $response = Invoke-WebRequest -Uri http://127.0.0.1:8080/hello -UseBasicParsing -TimeoutSec 5
             if ($response.StatusCode -eq 200) {
               Write-Host "? Server is up and responding!"
               $serverReady = $true
