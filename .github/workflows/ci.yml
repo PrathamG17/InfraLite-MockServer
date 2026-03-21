@@ -54,6 +54,18 @@ jobs:
         Write-Host "Server process started, waiting before health checks..."
         Start-Sleep -Seconds 10
 
+    - name: Diagnostics - check port and first request
+      shell: powershell
+      run: |
+        Write-Host "Checking if port 8080 is bound..."
+        netstat -ano | findstr :8080
+        Write-Host "Trying one-off request to /hello..."
+        try {
+          Invoke-WebRequest http://localhost:8080/hello -UseBasicParsing -TimeoutSec 5
+        } catch {
+          Write-Warning "Initial /hello request failed: $($_.Exception.Message)"
+        }
+
     - name: Wait for server health
       shell: powershell
       run: |
@@ -66,18 +78,18 @@ jobs:
           try {
             $response = Invoke-WebRequest -Uri http://localhost:8080/hello -UseBasicParsing -TimeoutSec 5
             if ($response.StatusCode -eq 200) {
-              Write-Host " Server is up and responding!"
+              Write-Host "? Server is up and responding!"
               $serverReady = $true
               break
             }
           } catch {
-            Write-Warning "Server not ready (attempt $i). Retrying in $retryDelay seconds..."
+            Write-Warning "Server not ready (attempt $i). Error: $($_.Exception.Message)"
             Start-Sleep -Seconds $retryDelay
           }
         }
 
         if (-not $serverReady) {
-          Write-Error " Server did not start after $maxRetries attempts. Check logs for details."
+          Write-Error "? Server did not start after $maxRetries attempts. Check logs for details."
           exit 1
         }
 
