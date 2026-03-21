@@ -235,11 +235,15 @@ int main(void)
 
         // Initialize TLS context with certificate and private key files
         auto baseDir = GetProjectRoot();
+        std::cerr << "Resolved project root: " << baseDir << std::endl;
+
         TLSContext tlsCtx((baseDir / "certs" / "server.crt").string(),
             (baseDir / "certs" / "server.key").string());
 
         if (!tlsCtx.Init()) {
+            std::cerr << "TLS init failed: certs not found or invalid" << std::endl;
             rLogger.Log("Failed to initialize TLS context", ELogLevel::LOG_ERROR);
+
             return 1;
         }
 
