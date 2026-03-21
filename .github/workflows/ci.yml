@@ -50,25 +50,36 @@ jobs:
       shell: powershell
       run: |
         cd build\Release
-        Start-Process -FilePath .\infralite.exe
+        Start-Process -FilePath .\infralite.exe -NoNewWindow
+        Write-Host "Server process started, waiting before health checks..."
         Start-Sleep -Seconds 10
 
     - name: Wait for server health
       shell: powershell
       run: |
-        $maxRetries = 5
-        for ($i=0; $i -lt $maxRetries; $i++) {
+        $maxRetries = 10
+        $retryDelay = 5
+        $serverReady = $false
+
+        for ($i=1; $i -le $maxRetries; $i++) {
+          Write-Host "Health check attempt $i of $maxRetries..."
           try {
-            Invoke-WebRequest http://localhost:8080/hello
-            Write-Host "Server is up!"
-            exit 0
+            $response = Invoke-WebRequest -Uri http://localhost:8080/hello -UseBasicParsing -TimeoutSec 5
+            if ($response.StatusCode -eq 200) {
+              Write-Host " Server is up and responding!"
+              $serverReady = $true
+              break
+            }
           } catch {
-            Write-Host "Server not ready, retrying..."
-            Start-Sleep -Seconds 2
+            Write-Warning "Server not ready (attempt $i). Retrying in $retryDelay seconds..."
+            Start-Sleep -Seconds $retryDelay
           }
         }
-        Write-Error "Server did not start in time"
-        exit 1
+
+        if (-not $serverReady) {
+          Write-Error " Server did not start after $maxRetries attempts. Check logs for details."
+          exit 1
+        }
 
     - name: Run route tests
       shell: powershell
