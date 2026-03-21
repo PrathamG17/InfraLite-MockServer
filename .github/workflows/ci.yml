@@ -63,7 +63,13 @@ jobs:
         try {
           Invoke-WebRequest http://127.0.0.1:8080/hello -UseBasicParsing -TimeoutSec 5
         } catch {
-          Write-Warning "Initial /hello request failed: $($_.Exception.Message)"
+          Write-Warning "Initial IPv4 /hello request failed: $($_.Exception.Message)"
+        }
+        Write-Host "Trying one-off request to /hello (IPv6)..."
+        try {
+          Invoke-WebRequest http://[::1]:8080/hello -UseBasicParsing -TimeoutSec 5
+        } catch {
+          Write-Warning "Initial IPv6 /hello request failed: $($_.Exception.Message)"
         }
 
     - name: Wait for server health
@@ -78,13 +84,22 @@ jobs:
           try {
             $response = Invoke-WebRequest -Uri http://127.0.0.1:8080/hello -UseBasicParsing -TimeoutSec 5
             if ($response.StatusCode -eq 200) {
-              Write-Host "? Server is up and responding!"
+              Write-Host "? Server is up via IPv4!"
               $serverReady = $true
               break
             }
           } catch {
-            Write-Warning "Server not ready (attempt $i). Error: $($_.Exception.Message)"
-            Start-Sleep -Seconds $retryDelay
+            try {
+              $response = Invoke-WebRequest -Uri http://[::1]:8080/hello -UseBasicParsing -TimeoutSec 5
+              if ($response.StatusCode -eq 200) {
+                Write-Host "? Server is up via IPv6!"
+                $serverReady = $true
+                break
+              }
+            } catch {
+              Write-Warning "Server not ready (attempt $i). Error: $($_.Exception.Message)"
+              Start-Sleep -Seconds $retryDelay
+            }
           }
         }
 
