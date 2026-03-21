@@ -260,8 +260,9 @@ int main(void)
         //CServer rServer(port, rRouter, rLogger, &rLogRepo);
         gServer = &rServer;
         SetConsoleCtrlHandler(ConsoleHandler, TRUE);
+        std::cerr << "InfraLite-Mockserver In Main Before server run" << std::endl;
         rServer.Run();
-
+        std::cerr << "InfraLite-Mockserver In Main Before server after run" << std::endl;
         if (rLogger.IsReady())
         {
             rLogger.Log("Server shutting down...", ELogLevel::INFO);

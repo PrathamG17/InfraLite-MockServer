@@ -118,6 +118,7 @@ void CServer::InitSocket()
         WSACleanup();
         throw std::runtime_error("listen failed");
     }
+    std::cout << "Server listening on http://localhost:8080" << std::endl;
 }
 
 int CServer::AcceptClient() const
