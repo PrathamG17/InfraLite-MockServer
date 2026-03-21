@@ -19,9 +19,16 @@ jobs:
     - name: Install CMake
       run: choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'
 
+    - name: Ensure certs directory exists
+      run: mkdir certs -Force
+
     - name: Generate self-signed cert
       run: |
-        openssl req -x509 -newkey rsa:2048 -keyout certs/server.key -out certs/server.crt -days 1 -nodes -subj "/CN=localhost"
+        openssl req -x509 -newkey rsa:2048 `
+          -keyout certs/server.key `
+          -out certs/server.crt `
+          -days 1 -nodes `
+          -subj "/CN=localhost"
 
     - name: Create build directory
       run: mkdir build -Force
