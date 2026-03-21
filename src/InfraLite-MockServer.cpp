@@ -29,6 +29,7 @@ BOOL WINAPI ConsoleHandler(DWORD signal);
 
 int main(void)
 {
+    std::cerr << "InfraLite-Mockserver Main Started" << std::endl;
     auto baseDir = GetProjectRoot();
 
     Logger rLogger((baseDir / "logs" / "InfraLite-MockServer.log").string());
@@ -79,6 +80,8 @@ int main(void)
 
         StaticFileRepository rFileRepo(&rDB);
         rFileRepo.CreateTable();
+
+        std::cerr << "InfraLite-Mockserver In Main Before Add Route" << std::endl;
 
         rRepo.AddRoute(adminId, "GET", "/dbhello", 200, "");
         rFileRepo.AddFile(1, "index.html", "text/html");
@@ -217,6 +220,8 @@ int main(void)
 
         int port = std::stoi(rConfigRepo.GetConfig("PORT"));
 
+        std::cerr << "InfraLite-Mockserver In Main Before JWT" << std::endl;
+
         std::string secret = std::getenv("JWT_SECRET") ? std::getenv("JWT_SECRET") : "localdevsecret";
         JWTVerifier verifier(secret, "HS256");
 
@@ -246,6 +251,8 @@ int main(void)
 
             return 1;
         }
+
+        std::cerr << "InfraLite-Mockserver In Main Before server start" << std::endl;
 
         // Construct server in secure mode
         CServer rServer(port, rRouter, rLogger, &rLogRepo, security, tlsCtx);

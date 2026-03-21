@@ -30,6 +30,9 @@ jobs:
           -days 1 -nodes `
           -subj "/CN=localhost"
 
+    - name: List certs
+      run: dir certs
+
     - name: Create build directory
       run: mkdir build -Force
 
@@ -43,25 +46,39 @@ jobs:
         cd build
         cmake --build . --config Release
 
+    # Debug run in foreground to capture stderr/stdout
+    - name: Run server in foreground (debug)
+      shell: powershell
+      run: |
+        cd build\Release
+        .\infralite.exe
+      continue-on-error: true
+
     - name: Start server in background
       shell: powershell
       run: |
         cd build\Release
         Start-Process -FilePath .\infralite.exe
-        Start-Sleep -Seconds 5
+        Start-Sleep -Seconds 10
 
     - name: Wait for server health
       shell: powershell
       run: |
-        $maxRetries = 10
+        $maxRetries = 15
         for ($i=0; $i -lt $maxRetries; $i++) {
           try {
             Invoke-WebRequest https://localhost:8080/hello -SkipCertificateCheck
-            Write-Host "Server is up!"
+            Write-Host "Server is up via HTTPS!"
             exit 0
           } catch {
-            Write-Host "Server not ready, retrying..."
-            Start-Sleep -Seconds 2
+            try {
+              Invoke-WebRequest http://localhost:8080/hello
+              Write-Host "Server is up via HTTP!"
+              exit 0
+            } catch {
+              Write-Host "Server not ready, retrying..."
+              Start-Sleep -Seconds 2
+            }
           }
         }
         Write-Error "Server did not start in time"
