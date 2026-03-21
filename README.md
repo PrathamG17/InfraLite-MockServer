@@ -67,24 +67,46 @@ Qt-based desktop interface providing role-specific workflows.
 - **SQLite3**: 3.30 or higher
 - **Git**: For version control
 
-### Build Instructions
+###  Build Instructions
 
+1. Clone the repository
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/InfraLite-MockServer.git
+git clone https://github.com/your-org/InfraLite-MockServer.git
 cd InfraLite-MockServer
+```
 
-# Create build directory
-mkdir build && cd build
+2. Set up vcpkg
+```bash
+# Clone vcpkg
+git clone https://github.com/microsoft/vcpkg.git
 
-# Configure with CMake
-cmake ..
+# Bootstrap vcpkg
+.\vcpkg\bootstrap-vcpkg.bat
 
-# Build the project
-cmake --build .
+# Install required dependencies (example: OpenSSL)
+.\vcpkg install openssl:x64-windows-static
+```
 
-# Run the application
-./InfraLite-MockServer
+3. Configure with CMake presets
+```bash
+cmake --preset x64-debug
+```
+
+4. Build the project
+```bash
+cmake --build --preset x64-debug
+```
+
+5. Run the application
+Before running, set the JWT secret environment variable (Windows PowerShell):
+
+```powershell
+$env:JWT_SECRET="myLocalSecret"
+```
+
+Then execute:
+```bash
+.\build\x64-debug\InfraLite-MockServer.exe
 ```
 
 ## 📁 Project Structure

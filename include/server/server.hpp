@@ -12,45 +12,55 @@
 #include <windows.h>
 
 #include "db/access_log_repository.hpp"
+#include "SecurityManager.hpp"
+#include "TLSContext.hpp"
 
-// Forward declaration of Router
 class Router;
 
 class CServer
 {
 private:
-    int iPort;                                  // Port number to listen on
-    int iServerFd;                              // File descriptor for server socket
-    Router& rRouter;                            // Reference to router for handling requests
-    bool bIsRunning;                            // Flag to control server loop
-    Logger& rLogger;                            //understand all hungarian notations..
+    int iPort;
+    int iServerFd;
+    Router& rRouter;
+    bool bIsRunning;
+    Logger& rLogger;
     AccessLogRepository* m_pLogRepo;
 
+    // Optional security/TLS
+    SecurityManager* pSecurity;
+    TLSContext* pTLS;
+
 public:
-    CServer(int iPort, Router& rRouter, Logger& rLogger, AccessLogRepository* logRepo);
+    // Old constructor (non-secure mode)
+    CServer(int iPort,
+        Router& rRouter,
+        Logger& rLogger,
+        AccessLogRepository* logRepo);
+
+    // New constructor (secure mode)
+    CServer(int iPort,
+        Router& rRouter,
+        Logger& rLogger,
+        AccessLogRepository* logRepo,
+        SecurityManager& security,
+        TLSContext& tls);
 
     ~CServer();
 
-    // Start the server loop
     void Run();
-
-    // Stop the server loop
     void Stop();
 
 private:
-    // Initialize socket and bind to port
     void InitSocket();
-
-    // Accept incoming client connection
-    int AcceptClient()const;
-
-    // Handle a single client request
+    int AcceptClient() const;
     void HandleClient(int iClientFd);
 
-    // Utility: read raw HTTP request from client
-    std::string ReadRequest(int iClientFd);
+    std::string ReadRequest(SSL* ssl);
+    void SendResponse(SSL* ssl, const HttpResponse& rResponse);
 
-    // Utility: send HTTP response to client
+    // Non-secure helpers
+    std::string ReadRequest(int iClientFd);
     void SendResponse(int iClientFd, const HttpResponse& rResponse);
 };
 

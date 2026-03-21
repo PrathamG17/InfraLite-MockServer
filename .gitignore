@@ -26,3 +26,7 @@ logs/
 
 # Build tools
 vcpkg/
+
+# TLS certs
+certs/server.crt
+certs/server.key

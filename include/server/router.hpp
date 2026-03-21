@@ -10,25 +10,38 @@
 #include "response.hpp"
 #include "config_loader.hpp"
 #include "file_handler.hpp"
+#include "SecurityManager.hpp"
+
+struct SecureRouteDef {
+    std::string method;
+    std::string path;
+    std::function<HttpResponse(const HttpRequest&)> handler;
+    Role requiredRole;
+};
 
 class Router
 {
 private:
-    // Map of "METHOD:PATH" -> handler function
     std::map<std::string, std::function<HttpResponse(const HttpRequest&)>> mRoutes;
-
+    std::map<std::string, SecureRouteDef> mSecureRoutes;
     FileHandler* pFileHandler;
 
 public:
     Router(FileHandler* pHandler);
 
-    void AddRoute(const std::string& sMethod, const std::string& sPath, std::function<HttpResponse(const HttpRequest&)> fnHandler);
+    void AddRoute(const std::string& sMethod, const std::string& sPath,
+        std::function<HttpResponse(const HttpRequest&)> fnHandler);
+
+    void AddSecureRoute(const std::string& sMethod, const std::string& sPath,
+        std::function<HttpResponse(const HttpRequest&)> fnHandler,
+        Role requiredRole);
 
     void LoadRoutes(const ConfigLoader& rConfig, Logger& rLogger);
 
     HttpResponse RouteRequest(const HttpRequest& request);
+    HttpResponse RouteRequest(const HttpRequest& request, SecurityManager& security);
 
-    EResponseFormat Router::StringToFormat(const std::string& sType);
+    EResponseFormat StringToFormat(const std::string& sType);
 };
 
 #endif // ROUTER_HPP
