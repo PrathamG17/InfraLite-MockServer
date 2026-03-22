@@ -50,63 +50,32 @@ jobs:
       shell: powershell
       run: |
         cd build\Release
-        Start-Process -FilePath .\infralite.exe -NoNewWindow
+        Start-Process -FilePath .\infralite.exe
         Write-Host "Server process started, waiting before health checks..."
         Start-Sleep -Seconds 10
-
-    - name: Diagnostics - check port and first request
-      shell: powershell
-      run: |
-        Write-Host "Checking if port 8080 is bound..."
-        netstat -ano | findstr :8080
-        Write-Host "Trying one-off request to /hello (IPv4)..."
-        try {
-          Invoke-WebRequest http://127.0.0.1:8080/hello -UseBasicParsing -TimeoutSec 5
-        } catch {
-          Write-Warning "Initial IPv4 /hello request failed: $($_.Exception.Message)"
-        }
-        Write-Host "Trying one-off request to /hello (IPv6)..."
-        try {
-          Invoke-WebRequest http://[::1]:8080/hello -UseBasicParsing -TimeoutSec 5
-        } catch {
-          Write-Warning "Initial IPv6 /hello request failed: $($_.Exception.Message)"
-        }
 
     - name: Wait for server health
       shell: powershell
       run: |
-        $maxRetries = 10
+        $maxRetries = 20
         $retryDelay = 5
-        $serverReady = $false
+        [System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $true }
 
         for ($i=1; $i -le $maxRetries; $i++) {
           Write-Host "Health check attempt $i of $maxRetries..."
           try {
-            $response = Invoke-WebRequest -Uri http://127.0.0.1:8080/hello -UseBasicParsing -TimeoutSec 5
+            $response = Invoke-WebRequest -Uri https://127.0.0.1:8443/hello -UseBasicParsing -TimeoutSec 5
             if ($response.StatusCode -eq 200) {
-              Write-Host "? Server is up via IPv4!"
-              $serverReady = $true
-              break
+              Write-Host "? Server is up with TLS!"
+              exit 0
             }
           } catch {
-            try {
-              $response = Invoke-WebRequest -Uri http://[::1]:8080/hello -UseBasicParsing -TimeoutSec 5
-              if ($response.StatusCode -eq 200) {
-                Write-Host "? Server is up via IPv6!"
-                $serverReady = $true
-                break
-              }
-            } catch {
-              Write-Warning "Server not ready (attempt $i). Error: $($_.Exception.Message)"
-              Start-Sleep -Seconds $retryDelay
-            }
+            Write-Warning "Server not ready (attempt $i). Error: $($_.Exception.Message)"
+            Start-Sleep -Seconds $retryDelay
           }
         }
-
-        if (-not $serverReady) {
-          Write-Error "? Server did not start after $maxRetries attempts. Check logs for details."
-          exit 1
-        }
+        Write-Error "? Server did not start after $maxRetries attempts."
+        exit 1
 
     - name: Run route tests
       shell: powershell
