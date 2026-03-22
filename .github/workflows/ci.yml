@@ -47,35 +47,14 @@ jobs:
         cd build
         cmake --build . --config Release
 
-    - name: Start server in background
+    # TEMPORARY: run server in foreground to capture crash logs
+    - name: Start server (debug mode)
       shell: powershell
       run: |
         cd build\Release
-        Start-Process -FilePath .\infralite.exe -ArgumentList '*> server.log'
-        Write-Host "Server process started, waiting before health checks..."
-        Start-Sleep -Seconds 10
-
-    - name: Diagnostics - process and port check
-      shell: powershell
-      run: |
-        Write-Host "=== Process list ==="
-        Get-Process infralite -ErrorAction SilentlyContinue | Format-List Id, ProcessName, StartTime
-
-        Write-Host "=== Port binding check (8080/8443) ==="
-        netstat -ano | findstr ":8080"
-        netstat -ano | findstr ":8443"
-
-        Write-Host "=== Match PID to process ==="
-        foreach ($line in (netstat -ano | findstr ":8080")) {
-          $pid = ($line -split "\s+")[-1]
-          tasklist /FI "PID eq $pid"
-        }
-        foreach ($line in (netstat -ano | findstr ":8443")) {
-          $pid = ($line -split "\s+")[-1]
-          tasklist /FI "PID eq $pid"
-        }
-
-        Write-Host "=== Server logs (stdout+stderr) ==="
+        Write-Host "Starting server in foreground..."
+        .\infralite.exe *> server.log
+        Write-Host "Server exited with code $LASTEXITCODE"
         if (Test-Path server.log) { Get-Content server.log }
 
     - name: Upload server logs
@@ -86,10 +65,21 @@ jobs:
         path: build/Release/server.log
         if-no-files-found: warn
 
+    # Keep diagnostics and health check for later, but they will fail until server stays alive
+    - name: Diagnostics - process and port check
+      shell: powershell
+      run: |
+        Write-Host "=== Process list ==="
+        Get-Process infralite -ErrorAction SilentlyContinue | Format-List Id, ProcessName, StartTime
+
+        Write-Host "=== Port binding check (8080/8443) ==="
+        netstat -ano | findstr ":8080"
+        netstat -ano | findstr ":8443"
+
     - name: Wait for server health
       shell: powershell
       run: |
-        $maxRetries = 20
+        $maxRetries = 5
         $retryDelay = 5
         [System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $true }
         for ($i=1; $i -le $maxRetries; $i++) {
