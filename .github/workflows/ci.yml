@@ -25,8 +25,8 @@ jobs:
       run: |
         mkdir certs -Force
         openssl req -x509 -newkey rsa:2048 -nodes `
-          -keyout certs\\server.key `
-          -out certs\\server.crt -days 1 `
+          -keyout certs\server.key `
+          -out certs\server.crt -days 1 `
           -subj "/CN=localhost"
 
     - name: List certs
@@ -49,9 +49,9 @@ jobs:
     - name: Start server (background)
       shell: powershell
       run: |
-        cd build\Release
+        $serverExe = Join-Path $PWD "build\Release\infralite.exe"
         Write-Host "Starting server in background..."
-        Start-Process -FilePath ".\infralite.exe" -RedirectStandardOutput "server.log"
+        Start-Process -FilePath $serverExe -WorkingDirectory $PWD -RedirectStandardOutput "server.log"
         exit 0
 
     - name: Upload server logs
@@ -59,7 +59,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: server-log
-        path: build/Release/server.log
+        path: server.log
         if-no-files-found: warn
 
     - name: Diagnostics - process and port check
@@ -71,7 +71,7 @@ jobs:
         Write-Host "=== Port binding check (8080) ==="
         netstat -ano | findstr ":8080"
 
-    - name: Wait for server health
+    - name: Wait for server health (HTTPS)
       shell: powershell
       run: |
         $maxRetries = 5
@@ -80,7 +80,7 @@ jobs:
         for ($i=1; $i -le $maxRetries; $i++) {
           Write-Host "Health check attempt $i of $maxRetries..."
           try {
-            $response = Invoke-WebRequest -Uri "http://127.0.0.1:8080/hello" -UseBasicParsing -TimeoutSec 5
+            $response = Invoke-WebRequest -Uri "https://127.0.0.1:8080/hello" -UseBasicParsing -TimeoutSec 5
             if ($response.StatusCode -eq 200) {
               Write-Host "? Server is up!"
               exit 0
