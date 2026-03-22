@@ -51,15 +51,24 @@ jobs:
       run: |
         $serverExe = Join-Path $PWD "build\Release\infralite.exe"
         Write-Host "Starting server in background..."
-        Start-Process -FilePath $serverExe -WorkingDirectory $PWD -RedirectStandardOutput "server.log"
+        Start-Process -FilePath $serverExe -WorkingDirectory $PWD
+        Start-Sleep -Seconds 3
         exit 0
 
-    - name: Upload server logs
+    - name: Upload server stdout logs
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: server-log
+        name: server-stdout
         path: server.log
+        if-no-files-found: warn
+
+    - name: Upload application logs
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-logs
+        path: logs/InfraLite-MockServer.log
         if-no-files-found: warn
 
     - name: Diagnostics - process and port check
@@ -74,9 +83,11 @@ jobs:
     - name: Wait for server health (HTTPS)
       shell: powershell
       run: |
+        [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]'Tls12,Tls13'
+        [System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $true }
+        
         $maxRetries = 5
         $retryDelay = 5
-        [System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $true }
         for ($i=1; $i -le $maxRetries; $i++) {
           Write-Host "Health check attempt $i of $maxRetries..."
           try {
