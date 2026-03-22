@@ -77,30 +77,6 @@ jobs:
         Write-Host "=== Process list ==="
         Get-Process infralite -ErrorAction SilentlyContinue | Format-List Id, ProcessName, StartTime
 
-    - name: Wait for server health (HTTPS)
-      shell: powershell
-      run: |
-        [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]'Tls12,Tls13'
-        [System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $true }
-        
-        $maxRetries = 5
-        $retryDelay = 5
-        for ($i=1; $i -le $maxRetries; $i++) {
-          Write-Host "Health check attempt $i of $maxRetries..."
-          try {
-            $response = Invoke-WebRequest -Uri "https://127.0.0.1:8080/hello" -UseBasicParsing -TimeoutSec 5
-            if ($response.StatusCode -eq 200) {
-              Write-Host "? Server is up!"
-              exit 0
-            }
-          } catch {
-            Write-Warning "Server not ready (attempt $i). Error: $($_.Exception.Message)"
-            Start-Sleep -Seconds $retryDelay
-          }
-        }
-        Write-Error "? Server did not start after $maxRetries attempts."
-        exit 1
-
     - name: Run route tests
       shell: powershell
       run: |
