@@ -51,10 +51,8 @@ jobs:
       shell: powershell
       run: |
         cd build\Release
-        # Redirect both stdout and stderr into one file
-        Start-Process -FilePath .\infralite.exe `
-          -RedirectStandardOutput server.log `
-          -RedirectStandardError server.log
+        # Run directly and merge stdout+stderr into one file
+        .\infralite.exe *> server.log &
         Write-Host "Server process started, waiting before health checks..."
         Start-Sleep -Seconds 10
 
@@ -80,6 +78,14 @@ jobs:
 
         Write-Host "=== Server logs (stdout+stderr) ==="
         if (Test-Path server.log) { Get-Content server.log }
+
+    - name: Upload server logs
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: server-log
+        path: build/Release/server.log
+        if-no-files-found: warn
 
     - name: Wait for server health
       shell: powershell
@@ -108,13 +114,6 @@ jobs:
       run: |
         pip install pytest requests
         pytest tests/test_routes.py -v --junitxml=report.xml
-
-    - name: Upload server logs
-      uses: actions/upload-artifact@v4
-      with:
-        name: server-log
-        path: build/Release/server.log
-        if-no-files-found: warn
 
     - name: Upload test report
       uses: actions/upload-artifact@v4
