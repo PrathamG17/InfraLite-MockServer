@@ -77,9 +77,6 @@ jobs:
         Write-Host "=== Process list ==="
         Get-Process infralite -ErrorAction SilentlyContinue | Format-List Id, ProcessName, StartTime
 
-        Write-Host "=== Port binding check (8080) ==="
-        netstat -ano | findstr ":8080"
-
     - name: Wait for server health (HTTPS)
       shell: powershell
       run: |
