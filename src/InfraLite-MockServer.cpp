@@ -29,7 +29,7 @@ BOOL WINAPI ConsoleHandler(DWORD signal);
 
 int main(void)
 {
-    std::cerr << "InfraLite-Mockserver Main Started" << std::endl;
+    std::cout << "InfraLite-Mockserver Main Started" << std::endl;
     auto baseDir = GetProjectRoot();
 
     Logger rLogger((baseDir / "logs" / "InfraLite-MockServer.log").string());
@@ -81,7 +81,7 @@ int main(void)
         StaticFileRepository rFileRepo(&rDB);
         rFileRepo.CreateTable();
 
-        std::cerr << "InfraLite-Mockserver In Main Before Add Route" << std::endl;
+        std::cout << "InfraLite-Mockserver In Main Before Add Route" << std::endl;
 
         rRepo.AddRoute(adminId, "GET", "/dbhello", 200, "");
         rFileRepo.AddFile(1, "index.html", "text/html");
@@ -220,7 +220,7 @@ int main(void)
 
         int port = std::stoi(rConfigRepo.GetConfig("PORT"));
 
-        std::cerr << "InfraLite-Mockserver In Main Before JWT" << std::endl;
+        std::cout << "InfraLite-Mockserver In Main Before JWT" << std::endl;
 
         std::string secret = std::getenv("JWT_SECRET") ? std::getenv("JWT_SECRET") : "localdevsecret";
         JWTVerifier verifier(secret, "HS256");
@@ -240,19 +240,19 @@ int main(void)
 
         // Initialize TLS context with certificate and private key files
         auto baseDir = GetProjectRoot();
-        std::cerr << "Resolved project root: " << baseDir << std::endl;
+        std::cout<< "Resolved project root: " << baseDir << std::endl;
 
         TLSContext tlsCtx((baseDir / "certs" / "server.crt").string(),
             (baseDir / "certs" / "server.key").string());
 
         if (!tlsCtx.Init()) {
-            std::cerr << "TLS init failed: certs not found or invalid" << std::endl;
+            std::cout << "TLS init failed: certs not found or invalid" << std::endl;
             rLogger.Log("Failed to initialize TLS context", ELogLevel::LOG_ERROR);
 
             return 1;
         }
 
-        std::cerr << "InfraLite-Mockserver In Main Before server start" << std::endl;
+        std::cout<< "InfraLite-Mockserver In Main Before server start" << std::endl;
 
         // Construct server in secure mode
         CServer rServer(port, rRouter, rLogger, &rLogRepo, security, tlsCtx);
@@ -260,9 +260,9 @@ int main(void)
         //CServer rServer(port, rRouter, rLogger, &rLogRepo);
         gServer = &rServer;
         SetConsoleCtrlHandler(ConsoleHandler, TRUE);
-        std::cerr << "InfraLite-Mockserver In Main Before server run" << std::endl;
+        std::cout << "InfraLite-Mockserver In Main Before server run" << std::endl;
         rServer.Run();
-        std::cerr << "InfraLite-Mockserver In Main Before server after run" << std::endl;
+        std::cout << "InfraLite-Mockserver In Main Before server after run" << std::endl;
         if (rLogger.IsReady())
         {
             rLogger.Log("Server shutting down...", ELogLevel::INFO);

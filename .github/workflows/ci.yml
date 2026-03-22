@@ -32,7 +32,7 @@ jobs:
           -subj "/CN=localhost"
 
     - name: List certs
-      run: dir certs
+      run: dir build\Release\certs
 
     - name: Create build directory
       run: mkdir build -Force
@@ -51,13 +51,13 @@ jobs:
       shell: powershell
       run: |
         cd build\Release
+        # Redirect both stdout and stderr into one file
         Start-Process -FilePath .\infralite.exe `
           -RedirectStandardOutput server.log `
-          -RedirectStandardError server.err
+          -RedirectStandardError server.log
         Write-Host "Server process started, waiting before health checks..."
         Start-Sleep -Seconds 10
 
-    # ?? New diagnostic step
     - name: Diagnostics - process and port check
       shell: powershell
       run: |
@@ -78,9 +78,8 @@ jobs:
           tasklist /FI "PID eq $pid"
         }
 
-        Write-Host "=== Server logs (stdout/stderr) ==="
+        Write-Host "=== Server logs (stdout+stderr) ==="
         if (Test-Path server.log) { Get-Content server.log }
-        if (Test-Path server.err) { Get-Content server.err }
 
     - name: Wait for server health
       shell: powershell
@@ -104,7 +103,6 @@ jobs:
         Write-Error "? Server did not start after $maxRetries attempts."
         exit 1
 
-
     - name: Run route tests
       shell: powershell
       run: |
@@ -115,7 +113,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: server-log
-        path: logs/InfraLite-MockServer.log
+        path: build/Release/server.log
         if-no-files-found: warn
 
     - name: Upload test report
