@@ -26,10 +26,10 @@ jobs:
       shell: bash
       run: |
         mkdir -p build/Release/certs
-        openssl req -x509 -newkey rsa:2048 -nodes -keyout build/Release/certs/server.key \
+        openssl req -x509 -newkey rsa:2048 -nodes \
+          -keyout build/Release/certs/server.key \
           -out build/Release/certs/server.crt -days 1 \
-          -subj "/CN=localhost"
-
+          -subj '/CN=localhost'
 
     - name: List certs
       run: dir certs
