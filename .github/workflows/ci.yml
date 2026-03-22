@@ -51,8 +51,7 @@ jobs:
       shell: powershell
       run: |
         cd build\Release
-        # Run directly and merge stdout+stderr into one file
-        .\infralite.exe *> server.log &
+        Start-Process -FilePath .\infralite.exe -RedirectStandardOutput server.log -RedirectStandardError server.log
         Write-Host "Server process started, waiting before health checks..."
         Start-Sleep -Seconds 10
 
