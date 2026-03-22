@@ -19,20 +19,18 @@ jobs:
     - name: Install CMake
       run: choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'
 
-    - name: Ensure certs directory exists
-      run: mkdir certs -Force
-
+    # Generate certs in project root (certs/ folder tracked via .gitkeep)
     - name: Generate self-signed TLS cert
       shell: powershell
       run: |
-        mkdir build\Release\certs -Force
+        mkdir certs -Force
         openssl req -x509 -newkey rsa:2048 -nodes `
-          -keyout build\Release\certs\server.key `
-          -out build\Release\certs\server.crt -days 1 `
+          -keyout certs\server.key `
+          -out certs\server.crt -days 1 `
           -subj "/CN=localhost"
 
     - name: List certs
-      run: dir build\Release\certs
+      run: dir certs
 
     - name: Create build directory
       run: mkdir build -Force
@@ -65,7 +63,6 @@ jobs:
         path: build/Release/server.log
         if-no-files-found: warn
 
-    # Keep diagnostics and health check for later, but they will fail until server stays alive
     - name: Diagnostics - process and port check
       shell: powershell
       run: |
