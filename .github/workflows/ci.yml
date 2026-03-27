@@ -9,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    env:
+      JWT_SECRET: localdevsecret   
 
     steps:
     - name: Checkout code
@@ -16,6 +18,19 @@ jobs:
 
     - name: Install CMake
       run: choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'
+
+    # Generate certs in project root (certs/ folder tracked via .gitkeep)
+    - name: Generate self-signed TLS cert
+      shell: powershell
+      run: |
+        mkdir certs -Force
+        openssl req -x509 -newkey rsa:2048 -nodes `
+          -keyout certs\server.key `
+          -out certs\server.crt -days 1 `
+          -subj "/CN=localhost"
+
+    - name: List certs
+      run: dir certs
 
     - name: Create build directory
       run: mkdir build -Force
@@ -30,39 +45,47 @@ jobs:
         cd build
         cmake --build . --config Release
 
-    - name: Start server in background
+    # Start server in background so workflow continues
+    - name: Start server (background)
       shell: powershell
       run: |
-        cd build\Release
-        Start-Process -FilePath .\infralite.exe
-        Start-Sleep -Seconds 5
+        $serverExe = Join-Path $PWD "build\Release\infralite.exe"
+        Write-Host "Starting server in background..."
+        Start-Process -FilePath $serverExe -WorkingDirectory $PWD
+        Start-Sleep -Seconds 3
+        exit 0
 
-    - name: Wait for server health
+    - name: Upload server stdout logs
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: server-stdout
+        path: server.log
+        if-no-files-found: warn
+
+    - name: Upload application logs
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-logs
+        path: logs/InfraLite-MockServer.log
+        if-no-files-found: warn
+
+    - name: Diagnostics - process and port check
       shell: powershell
       run: |
-        $maxRetries = 10
-        for ($i=0; $i -lt $maxRetries; $i++) {
-          try {
-            Invoke-WebRequest http://localhost:8080/hello -UseBasicParsing
-            Write-Host "Server is up!"
-            exit 0
-          } catch {
-            Write-Host "Server not ready, retrying..."
-            Start-Sleep -Seconds 2
-          }
-        }
-        Write-Error "Server did not start in time"
-        exit 1
+        Write-Host "=== Process list ==="
+        Get-Process infralite -ErrorAction SilentlyContinue | Format-List Id, ProcessName, StartTime
 
     - name: Run route tests
       shell: powershell
       run: |
         pip install pytest requests
-        pytest tests/test_routes.py -v
+        pytest tests/test_routes.py -v --junitxml=report.xml
 
-    - name: Upload server logs
+    - name: Upload test report
       uses: actions/upload-artifact@v4
       with:
-        name: server-log
-        path: logs/InfraLite-MockServer.log
+        name: test-report
+        path: report.xml
         if-no-files-found: warn

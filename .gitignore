@@ -12,3 +12,21 @@ Notes.txt
 
 #IDE
 .vs
+
+# Python cache
+__pycache__/
+*.pyc
+
+# SQLite database
+*.db
+
+# Logs
+*.log
+logs/
+
+# Build tools
+vcpkg/
+
+# TLS certs
+certs/server.crt
+certs/server.key

@@ -1,100 +1,91 @@
 #include "router.hpp"
 #include <iostream>
+#include <thread>
+#include <chrono>
 
-// Constructor: initialize with FileHandler
-Router::Router(FileHandler* pHandler): pFileHandler(pHandler) {}
+Router::Router(FileHandler* pHandler) : pFileHandler(pHandler) {}
 
-// AddRoute: register a new route manually
-void Router::AddRoute(const std::string& sMethod, const std::string& sPath,std::function<HttpResponse(const HttpRequest&)> fnHandler)
+void Router::AddRoute(const std::string& sMethod, const std::string& sPath,
+    std::function<HttpResponse(const HttpRequest&)> fnHandler)
 {
     std::string sKey = sMethod + ":" + sPath;
     mRoutes[sKey] = fnHandler;
 }
 
-// LoadRoutes: integrate with ConfigLoader
+void Router::AddSecureRoute(const std::string& sMethod, const std::string& sPath,
+    std::function<HttpResponse(const HttpRequest&)> fnHandler,
+    Role requiredRole)
+{
+    std::string sKey = sMethod + ":" + sPath;
+    mSecureRoutes[sKey] = { sMethod, sPath, fnHandler, requiredRole };
+}
+
 void Router::LoadRoutes(const ConfigLoader& rConfig, Logger& rLogger)
 {
-    try
-    {
+    try {
         const auto& vRoutes = rConfig.GetRoutes();
-
         for (const auto& rRoute : vRoutes)
         {
             std::string sKey = rRoute.sMethod + ":" + rRoute.sPath;
-
-            auto fnHandler = [rRoute, this](const HttpRequest& request) -> HttpResponse
-                {
-                    HttpResponse rResponse;
-
-                    // Delay simulation
-                    if (rRoute.iDelayMs > 0) {
-                        std::this_thread::sleep_for(std::chrono::milliseconds(rRoute.iDelayMs));
-                    }
-
-                    // Build response from config
-                    rResponse.iStatusCode = rRoute.iStatusCode;          // ? status code
-                    rResponse.sStatusText = rRoute.sStatusText;          // ? status text
-                    rResponse.eFormat = StringToFormat(rRoute.sResponseType); // ? format
-                    rResponse.sBody = rRoute.sResponseBody;              // ? body
-
-                    return rResponse;
+            auto fnHandler = [rRoute, this](const HttpRequest& request) -> HttpResponse {
+                HttpResponse rResponse;
+                if (rRoute.iDelayMs > 0) {
+                    std::this_thread::sleep_for(std::chrono::milliseconds(rRoute.iDelayMs));
+                }
+                rResponse.iStatusCode = rRoute.iStatusCode;
+                rResponse.sStatusText = rRoute.sStatusText;
+                rResponse.eFormat = StringToFormat(rRoute.sResponseType);
+                rResponse.sBody = rRoute.sResponseBody;
+                return rResponse;
                 };
-
-
             mRoutes[sKey] = fnHandler;
         }
     }
-    catch (const std::exception& ex)
-    {
+    catch (const std::exception& ex) {
         rLogger.Log("Router::LoadRoutes exception -> " + static_cast<std::string>(ex.what()), ELogLevel::LOG_ERROR);
     }
 }
 
-// RouteRequest: handle incoming request
 HttpResponse Router::RouteRequest(const HttpRequest& request)
 {
-    HttpResponse rResponse;
-
-    try
-    {
-        std::string sKey = request.GetMethod() + ":" + request.GetPath();
-
-        auto it = mRoutes.find(sKey);
-        if (it != mRoutes.end())
-        {
-            return it->second(request);
-        }
-
-        if (pFileHandler != nullptr)
-        {
-            return pFileHandler->ServeFile(request.GetPath());
-        }
-
-        rResponse.iStatusCode = 404;
-        rResponse.sStatusText = "Not Found";
-        rResponse.eFormat = EResponseFormat::PLAIN;
-        rResponse.sBody = "Route not found: " + request.GetPath();
+    std::string sKey = request.GetMethod() + ":" + request.GetPath();
+    auto it = mRoutes.find(sKey);
+    if (it != mRoutes.end()) {
+        return it->second(request);
     }
-    catch (const std::exception& ex)
-    {
-        rResponse.iStatusCode = 500;
-        rResponse.sStatusText = "Internal Server Error";
-        rResponse.eFormat = EResponseFormat::PLAIN;
-        rResponse.sBody = std::string("Router exception: ") + ex.what();
+    if (pFileHandler != nullptr) {
+        return pFileHandler->ServeFile(request.GetPath());
     }
-
-    return rResponse;
+    HttpResponse resp;
+    resp.iStatusCode = 404;
+    resp.sStatusText = "Not Found";
+    resp.eFormat = EResponseFormat::PLAIN;
+    resp.sBody = "Route not found: " + request.GetPath();
+    return resp;
 }
 
-// Utility function to convert string to EResponseFormat
+HttpResponse Router::RouteRequest(const HttpRequest& request, SecurityManager& security)
+{
+    std::string sKey = request.GetMethod() + ":" + request.GetPath();
+    auto itSecure = mSecureRoutes.find(sKey);
+    if (itSecure != mSecureRoutes.end()) {
+        if (!security.Authorize(request, itSecure->second.requiredRole)) {
+            HttpResponse resp;
+            resp.iStatusCode = 403;
+            resp.sStatusText = "Forbidden";
+            resp.eFormat = EResponseFormat::PLAIN;
+            resp.sBody = "Access denied";
+            return resp;
+        }
+        return itSecure->second.handler(request);
+    }
+    return RouteRequest(request);
+}
+
 EResponseFormat Router::StringToFormat(const std::string& sType)
 {
-    if (sType == "JSON") 
-        return EResponseFormat::JSON;
-    if (sType == "HTML") 
-        return EResponseFormat::HTML;
-    if (sType == "XML")  
-        return EResponseFormat::XML;
-    
+    if (sType == "JSON") return EResponseFormat::JSON;
+    if (sType == "HTML") return EResponseFormat::HTML;
+    if (sType == "XML")  return EResponseFormat::XML;
     return EResponseFormat::PLAIN;
 }

@@ -14,7 +14,6 @@ endif()
 
 # Add subdirectories for modular code
 add_subdirectory(src/server)
-# Later you will add:
 add_subdirectory(src/db)
 # add_subdirectory(src/ui)
 

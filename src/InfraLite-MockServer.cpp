@@ -9,6 +9,7 @@
 #include "config_loader.hpp"
 #include "file_handler.hpp"
 #include "logger.hpp"
+#include <nlohmann/json.hpp>
 
 #include "db/database_handler.hpp"
 #include "db/route_repository.hpp"
@@ -16,6 +17,9 @@
 #include "db/static_file_repository.hpp"
 #include "db/user_repository.hpp"
 #include "db/server_config_repository.hpp"
+
+// For token generation (dummy example)
+#include <string>
 
 CServer* gServer = nullptr;
 Logger* gLogger = nullptr;
@@ -25,19 +29,18 @@ BOOL WINAPI ConsoleHandler(DWORD signal);
 
 int main(void)
 {
+    std::cout << "InfraLite-Mockserver Main Started" << std::endl;
     auto baseDir = GetProjectRoot();
 
     Logger rLogger((baseDir / "logs" / "InfraLite-MockServer.log").string());
     try
     {
         gLogger = &rLogger;
-        // Step 1: Initialize Logger
         if (rLogger.IsReady())
         {
             rLogger.Log("Server starting up...", ELogLevel::INFO);
         }
 
-        // Step 2: Initialize ConfigLoader
         ConfigLoader rConfig((baseDir / "config" / "routes.json").string());
         if (!rConfig.LoadConfig(rLogger))
         {
@@ -45,23 +48,18 @@ int main(void)
             return 1;
         }
 
-        // Step 3: Initialize FileHandler
         FileHandler rFileHandler((baseDir / "static").string());
 
-        // Step 4: Initialize Router
         Router rRouter(&rFileHandler);
         rRouter.LoadRoutes(rConfig, rLogger);
 
-
-        // initialize Database Handler
         std::filesystem::path dataDir = baseDir / "data";
         std::filesystem::create_directories(dataDir);
 
         std::filesystem::path dbPath = dataDir / "infralite.db";
-
         DatabaseHandler rDB;
 
-        if(!rDB.Open(dbPath.string()))
+        if (!rDB.Open(dbPath.string()))
         {
             std::cout << "Database Open() : Failed!!\n";
             return 1;
@@ -69,31 +67,22 @@ int main(void)
 
         ServerConfigRepository rConfigRepo(&rDB);
         rConfigRepo.CreateTable();
-
         rConfigRepo.SetConfig("PORT", "8080", "Server listening port");
         rConfigRepo.SetConfig("STATIC_DIR", "static", "Static files directory");
         rConfigRepo.SetConfig("LOG_LEVEL", "INFO", "Logging level");
 
-        // first create a user
         UserRepository rUserRepo(&rDB);
         rUserRepo.CreateTable();
-
-        int adminId = rUserRepo.AddUser(
-            "admin",
-            "admin12hash",
-            "admin"
-        );
+        int adminId = rUserRepo.AddUser("admin", "admin12hash", "admin");
 
         RouteRepository rRepo(&rDB);
-        // create table if not exists
         rRepo.CreateTable();
 
-        // testing static file table
         StaticFileRepository rFileRepo(&rDB);
         rFileRepo.CreateTable();
 
+        std::cout << "InfraLite-Mockserver In Main Before Add Route" << std::endl;
 
-        // Inssert test route
         rRepo.AddRoute(adminId, "GET", "/dbhello", 200, "");
         rFileRepo.AddFile(1, "index.html", "text/html");
         rRepo.AddRoute(adminId, "GET", "/dbtest", 200, "<h1>Second DB route!!<h1>");
@@ -104,57 +93,38 @@ int main(void)
         int logoID = rRepo.AddRoute(adminId, "GET", "/logo", 200, "");
         rFileRepo.AddFile(logoID, "index.html", "text/html");
 
-        // Read routes and print to console
         auto routes = rRepo.GetRoutes();
         auto files = rFileRepo.GetFiles();
-
         std::unordered_map<int, StaticFile> fileMap;
+        for (const auto& f : files) { fileMap[f.routeId] = f; }
 
-        for(const auto& f : files)
-        {
-            fileMap[f.routeId] = f;
-        }
-
-        for(const auto& r : routes)
+        for (const auto& r : routes)
         {
             auto it = fileMap.find(r.routeId);
-
             if (it != fileMap.end())
             {
                 StaticFile f = it->second;
-
                 rLogger.Log("Static Route Loaded: " + r.method + " " + r.path, ELogLevel::INFO);
-
                 rRouter.AddRoute(r.method, r.path,
-                    [&rFileHandler, f](const HttpRequest& req)
-                {
-                    std::cout << "STATIC HANDLER : " << f.filePath << std::endl;
-                    return rFileHandler.ServeFile(f.filePath);
-                });
+                    [&rFileHandler, f](const HttpRequest& req) {
+                        return rFileHandler.ServeFile(f.filePath);
+                    });
             }
-
             else
             {
                 rLogger.Log("DB Route Loaded: " + r.method + " " + r.path, ELogLevel::INFO);
-
                 rRouter.AddRoute(r.method, r.path,
-                    [r](const HttpRequest& req)
-                {
-                    HttpResponse resp;
-
-                    std::cout << "DB HANDLER" << std::endl;
-
-                    resp.iStatusCode = r.responseStatus;
-                    resp.sStatusText = "OK";
-                    resp.mHeaders["Content-Type"] = "text/html";
-                    resp.sBody = r.responseBody;
-
-                    return resp;
-                });
+                    [r](const HttpRequest& req) {
+                        HttpResponse resp;
+                        resp.iStatusCode = r.responseStatus;
+                        resp.sStatusText = "OK";
+                        resp.mHeaders["Content-Type"] = "text/html";
+                        resp.sBody = r.responseBody;
+                        return resp;
+                    });
             }
         }
 
-        // Step 2: Register GET routes
         rRouter.AddRoute("GET", "/namaskar", [](const HttpRequest& rReq) {
             HttpResponse rResp;
             rResp.iStatusCode = 200;
@@ -173,40 +143,126 @@ int main(void)
             return rResp;
             });
 
-        // Step 3: Register POST route
         rRouter.AddRoute("POST", "/submit", [](const HttpRequest& rReq) {
             HttpResponse rResp;
-            rResp.mHeaders["Content-Type"] = "text/plain";
+            rResp.mHeaders["Content-Type"] = "application/json";
 
-            // Simple validation: require non-empty body
-            if (rReq.GetBody().empty() || rReq.GetBody() == "{}") {
+            std::string body = rReq.GetBody();  // or rReq.GetRawBody() if available
+            if (body.empty()) {
                 rResp.iStatusCode = 400;
                 rResp.sStatusText = "Bad Request";
-                rResp.sBody = "error: missing data";
+                rResp.sBody = R"({"error":"missing data"})";
+                return rResp;
             }
-            else {
-                rResp.iStatusCode = 200;
-                rResp.sStatusText = "OK";
-                rResp.sBody = "Data received: " + rReq.GetBody();
+
+            try {
+                auto j = nlohmann::json::parse(body);
+                if (!j.contains("data") || j["data"].is_null()) {
+                    rResp.iStatusCode = 400;
+                    rResp.sStatusText = "Bad Request";
+                    rResp.sBody = R"({"error":"missing data"})";
+                }
+                else {
+                    rResp.iStatusCode = 200;
+                    rResp.sStatusText = "OK";
+                    rResp.sBody = "Data received: " + j["data"].get<std::string>();
+                }
+            }
+            catch (const std::exception& e) {
+                rResp.iStatusCode = 400;
+                rResp.sStatusText = "Bad Request";
+                rResp.sBody = R"({"error":"invalid json"})";
             }
 
             return rResp;
             });
 
-        // Create Access Log Repository table
+        // Secure routes using JWT + role enforcement
+        rRouter.AddSecureRoute("GET", "/secure/admin",
+            [](const HttpRequest& req) {
+                HttpResponse resp;
+                resp.iStatusCode = 200;
+                resp.sStatusText = "OK";
+                resp.mHeaders["Content-Type"] = "text/plain";
+                resp.sBody = "Welcome, admin! Secure content.";
+                return resp;
+            },
+            Role::Admin   // required role
+        );
+
+        rRouter.AddSecureRoute("GET", "/secure/qa",
+            [](const HttpRequest& req) {
+                HttpResponse resp;
+                resp.iStatusCode = 200;
+                resp.sStatusText = "OK";
+                resp.mHeaders["Content-Type"] = "text/plain";
+                resp.sBody = "Hello QA team!";
+                return resp;
+            },
+            Role::QA
+        );
+
+        rRouter.AddSecureRoute("GET", "/secure/viewer",
+            [](const HttpRequest& req) {
+                HttpResponse resp;
+                resp.iStatusCode = 200;
+                resp.sStatusText = "OK";
+                resp.mHeaders["Content-Type"] = "text/plain";
+                resp.sBody = "Viewer access granted.";
+                return resp;
+            },
+            Role::Viewer
+        );
+
+
         AccessLogRepository rLogRepo(&rDB);
         rLogRepo.CreateTable();
 
-        // Step 5: Initialize and run CServer
-        // using ServerConfig Table for port number
         int port = std::stoi(rConfigRepo.GetConfig("PORT"));
 
-        CServer rServer(port, rRouter, rLogger, &rLogRepo);
-        gServer = &rServer;
-        SetConsoleCtrlHandler(ConsoleHandler, TRUE);            //for windows only...
-        rServer.Run(); // enters accept loop
+        std::cout << "InfraLite-Mockserver In Main Before JWT" << std::endl;
 
-        // Step 6: Graceful shutdown
+        std::string secret = std::getenv("JWT_SECRET") ? std::getenv("JWT_SECRET") : "localdevsecret";
+        JWTVerifier verifier(secret, "HS256");
+
+        // Generate a real JWT token string for testing
+        std::map<std::string, std::string> claims = {
+            {"user", "admin"},
+            {"role", "Admin"}
+        };
+        std::string testToken = verifier.Generate(claims);
+
+        // Log the generated token
+        rLogger.Log("Generated test JWT token: " + testToken, ELogLevel::INFO);
+
+        // Pass verifier into your security manager
+        SecurityManager security(verifier);
+
+        // Initialize TLS context with certificate and private key files
+        auto baseDir = GetProjectRoot();
+        std::cout<< "Resolved project root: " << baseDir << std::endl;
+
+        TLSContext tlsCtx((baseDir / "certs" / "server.crt").string(),
+            (baseDir / "certs" / "server.key").string());
+
+        if (!tlsCtx.Init()) {
+            std::cout << "TLS init failed: certs not found or invalid" << std::endl;
+            rLogger.Log("Failed to initialize TLS context", ELogLevel::LOG_ERROR);
+
+            return 1;
+        }
+
+        std::cout<< "InfraLite-Mockserver In Main Before server start" << std::endl;
+
+        // Construct server in secure mode
+        CServer rServer(port, rRouter, rLogger, &rLogRepo, security, tlsCtx);
+
+        //CServer rServer(port, rRouter, rLogger, &rLogRepo);
+        gServer = &rServer;
+        SetConsoleCtrlHandler(ConsoleHandler, TRUE);
+        std::cout << "InfraLite-Mockserver In Main Before server run" << std::endl;
+        rServer.Run();
+        std::cout << "InfraLite-Mockserver In Main Before server after run" << std::endl;
         if (rLogger.IsReady())
         {
             rLogger.Log("Server shutting down...", ELogLevel::INFO);
@@ -220,34 +276,31 @@ int main(void)
     return 0;
 }
 
-BOOL WINAPI ConsoleHandler(DWORD signal) 
+BOOL WINAPI ConsoleHandler(DWORD signal)
 {
-    if (signal == CTRL_C_EVENT || signal == CTRL_CLOSE_EVENT) 
+    if (signal == CTRL_C_EVENT || signal == CTRL_CLOSE_EVENT)
     {
-        if (gLogger != nullptr && gLogger->IsReady()) 
+        if (gLogger != nullptr && gLogger->IsReady())
             gLogger->Log("Server shutting down due to console event", ELogLevel::INFO);
 
-        if (gServer != nullptr) 
-            gServer->Stop(); // custom method to break accept loop
+        if (gServer != nullptr)
+            gServer->Stop();
 
-        return TRUE; // handled
+        return TRUE;
     }
     return FALSE;
 }
 
-std::filesystem::path GetProjectRoot() 
+std::filesystem::path GetProjectRoot()
 {
     auto cwd = std::filesystem::current_path();
-
-    // Walk up until we find "config"
-    for (int i = 0; i < 4; ++i) 
-    { // try up to 4 levels
-        if (std::filesystem::exists(cwd / "config")) 
+    for (int i = 0; i < 4; ++i)
+    {
+        if (std::filesystem::exists(cwd / "config"))
         {
             return cwd;
         }
         cwd = cwd.parent_path();
     }
-
-    return std::filesystem::current_path(); // fallback
+    return std::filesystem::current_path();
 }
